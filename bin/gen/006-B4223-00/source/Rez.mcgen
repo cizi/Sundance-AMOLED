@@ -1,0 +1,836 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var LauncherIcon as ResourceId;
+    } // Drawables
+
+    module Fonts {
+        (:initialized) var fntSd01 as ResourceId;
+        (:initialized) var fntSd02 as ResourceId;
+        (:initialized) var fntSd03 as ResourceId;
+        (:initialized) var fntSd04 as ResourceId;
+        (:initialized) var fntSd05 as ResourceId;
+        (:initialized) var fntSd19 as ResourceId;
+        (:initialized) var fntSd20 as ResourceId;
+        (:initialized) var fntSd21 as ResourceId;
+        (:initialized) var fntSd22 as ResourceId;
+        (:initialized) var fntSd23 as ResourceId;
+        (:initialized) var fntSd09 as ResourceId;
+        (:initialized) var fntSd11 as ResourceId;
+        (:initialized) var fntSd08 as ResourceId;
+        (:initialized) var fntSd10 as ResourceId;
+        (:initialized) var fntSd07 as ResourceId;
+        (:initialized) var fntSd13 as ResourceId;
+        (:initialized) var fntSd14 as ResourceId;
+        (:initialized) var fntSd15 as ResourceId;
+        (:initialized) var fntSd16 as ResourceId;
+        (:initialized) var fntSd17 as ResourceId;
+        (:initialized) var fntSd01_r as ResourceId;
+        (:initialized) var fntSd02_r as ResourceId;
+        (:initialized) var fntSd03_r as ResourceId;
+        (:initialized) var fntSd04_r as ResourceId;
+        (:initialized) var fntSd05_r as ResourceId;
+        (:initialized) var fntSd11_r as ResourceId;
+        (:initialized) var fntSd10_r as ResourceId;
+        (:initialized) var fntSd09_r as ResourceId;
+        (:initialized) var fntSd08_r as ResourceId;
+        (:initialized) var fntSd07_r as ResourceId;
+        (:initialized) var fntSd13_r as ResourceId;
+        (:initialized) var fntSd14_r as ResourceId;
+        (:initialized) var fntSd15_r as ResourceId;
+        (:initialized) var fntSd16_r as ResourceId;
+        (:initialized) var fntSd17_r as ResourceId;
+        (:initialized) var fntSd19_r as ResourceId;
+        (:initialized) var fntSd20_r as ResourceId;
+        (:initialized) var fntSd21_r as ResourceId;
+        (:initialized) var fntSd22_r as ResourceId;
+        (:initialized) var fntSd23_r as ResourceId;
+        (:initialized) var fntIcons as ResourceId;
+        (:initialized) var fntDataFields as ResourceId;
+        (:initialized) var fntDataFieldsX as ResourceId;
+        (:initialized) var fntWeather as ResourceId;
+    } // Fonts
+
+    module Layouts {
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_custom_drawable_11763145011262601869 = new Background();
+
+            return [rez_cmp_local_custom_drawable_11763145011262601869] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Strings {
+        (:initialized) var CurrentTimePointerTypeTitle as ResourceId;
+        (:initialized) var SecondTimePointerTypeTitle as ResourceId;
+        (:initialized) var HR as ResourceId;
+        (:initialized) var UtcPlus65 as ResourceId;
+        (:initialized) var ColorRed as ResourceId;
+        (:initialized) var NightModeTitle as ResourceId;
+        (:initialized) var UtcPlus1 as ResourceId;
+        (:initialized) var ShowAlarmIndicatorTitle as ResourceId;
+        (:initialized) var UtcPlus2 as ResourceId;
+        (:initialized) var UtcPlus3 as ResourceId;
+        (:initialized) var UtcPlus4 as ResourceId;
+        (:initialized) var UtcPlus5 as ResourceId;
+        (:initialized) var BlueHourColorTitle as ResourceId;
+        (:initialized) var UtcPlus6 as ResourceId;
+        (:initialized) var UtcPlus7 as ResourceId;
+        (:initialized) var NightModeThemeColorTitle as ResourceId;
+        (:initialized) var UtcPlus8 as ResourceId;
+        (:initialized) var UtcPlus9 as ResourceId;
+        (:initialized) var Distance as ResourceId;
+        (:initialized) var MilitaryFormatTitle as ResourceId;
+        (:initialized) var UtcPlus55 as ResourceId;
+        (:initialized) var width4 as ResourceId;
+        (:initialized) var width3 as ResourceId;
+        (:initialized) var width2 as ResourceId;
+        (:initialized) var DateFormat4 as ResourceId;
+        (:initialized) var DateFormat3 as ResourceId;
+        (:initialized) var DateFormat2 as ResourceId;
+        (:initialized) var DateFormat1 as ResourceId;
+        (:initialized) var ColorLightYellow as ResourceId;
+        (:initialized) var ForegroundColorTitle as ResourceId;
+        (:initialized) var DaylightProgessWidthTitle as ResourceId;
+        (:initialized) var width8 as ResourceId;
+        (:initialized) var ShowSecondTimeOnDialTitle as ResourceId;
+        (:initialized) var width6 as ResourceId;
+        (:initialized) var fullDialOff as ResourceId;
+        (:initialized) var UtcMinus6 as ResourceId;
+        (:initialized) var ColorBlue as ResourceId;
+        (:initialized) var UtcMinus10 as ResourceId;
+        (:initialized) var UtcMinus7 as ResourceId;
+        (:initialized) var UtcMinus95 as ResourceId;
+        (:initialized) var UtcMinus4 as ResourceId;
+        (:initialized) var BackgroundColorTitle as ResourceId;
+        (:initialized) var UtcMinus5 as ResourceId;
+        (:initialized) var UtcPlus875 as ResourceId;
+        (:initialized) var ShowGoldenBlueHoursTitle as ResourceId;
+        (:initialized) var UtcMinus11 as ResourceId;
+        (:initialized) var UtcMinus8 as ResourceId;
+        (:initialized) var UtcMinus12 as ResourceId;
+        (:initialized) var UtcMinus9 as ResourceId;
+        (:initialized) var UtcPlus45 as ResourceId;
+        (:initialized) var UtcMinus2 as ResourceId;
+        (:initialized) var UseBiggerFontDataFieldsTitle as ResourceId;
+        (:initialized) var UtcMinus3 as ResourceId;
+        (:initialized) var ColorDarkGreen as ResourceId;
+        (:initialized) var UtcMinus1 as ResourceId;
+        (:initialized) var UseWatchBezelTitle as ResourceId;
+        (:initialized) var PressureGraphBorderTitle as ResourceId;
+        (:initialized) var Opt4Title as ResourceId;
+        (:initialized) var UtcPlus35 as ResourceId;
+        (:initialized) var hpa as ResourceId;
+        (:initialized) var NextSunEvent as ResourceId;
+        (:initialized) var ColorTransparent as ResourceId;
+        (:initialized) var ColorDarkGrey as ResourceId;
+        (:initialized) var width24 as ResourceId;
+        (:initialized) var OptionDisabled as ResourceId;
+        (:initialized) var ColorDarkYellow as ResourceId;
+        (:initialized) var SecondTimeOnDialColorTitle as ResourceId;
+        (:initialized) var ColorBlack as ResourceId;
+        (:initialized) var width20 as ResourceId;
+        (:initialized) var DateFormatTitle as ResourceId;
+        (:initialized) var LikeASuunto as ResourceId;
+        (:initialized) var fullDialOn as ResourceId;
+        (:initialized) var ShowMoonPhaseBeforeDateTitle as ResourceId;
+        (:initialized) var ColorLightBlue as ResourceId;
+        (:initialized) var width14 as ResourceId;
+        (:initialized) var Opt2Title as ResourceId;
+        (:initialized) var MoonPhase as ResourceId;
+        (:initialized) var width16 as ResourceId;
+        (:initialized) var width18 as ResourceId;
+        (:initialized) var GoldenHourColorTitle as ResourceId;
+        (:initialized) var UtcMinus35 as ResourceId;
+        (:initialized) var Utc as ResourceId;
+        (:initialized) var SolarIntensityPeriodTitle as ResourceId;
+        (:initialized) var UtcPlus575 as ResourceId;
+        (:initialized) var PressureUnitTitle as ResourceId;
+        (:initialized) var width10 as ResourceId;
+        (:initialized) var CurrentTimePointerTitle as ResourceId;
+        (:initialized) var width12 as ResourceId;
+        (:initialized) var SolarIntensityPeriod10 as ResourceId;
+        (:initialized) var SecondTime as ResourceId;
+        (:initialized) var SolarIntensityPeriod15 as ResourceId;
+        (:initialized) var UtcPlus13 as ResourceId;
+        (:initialized) var Battery as ResourceId;
+        (:initialized) var UtcPlus14 as ResourceId;
+        (:initialized) var SolarIntensityPeriod1 as ResourceId;
+        (:initialized) var Opt1Title as ResourceId;
+        (:initialized) var SolarIntensityPeriod2 as ResourceId;
+        (:initialized) var ColorWhite as ResourceId;
+        (:initialized) var Floors as ResourceId;
+        (:initialized) var ShowFullDiaTitle as ResourceId;
+        (:initialized) var UtcPlus105 as ResourceId;
+        (:initialized) var SolarIntensityPeriod5 as ResourceId;
+        (:initialized) var ActiveCalories as ResourceId;
+        (:initialized) var SolarIntensityPeriod3 as ResourceId;
+        (:initialized) var SolarIntensityPeriod4 as ResourceId;
+        (:initialized) var UtcPlus11 as ResourceId;
+        (:initialized) var SolarIntensity as ResourceId;
+        (:initialized) var UtcPlus12 as ResourceId;
+        (:initialized) var UtcPlus10 as ResourceId;
+        (:initialized) var DaylightProgessTitle as ResourceId;
+        (:initialized) var ColorOrange as ResourceId;
+        (:initialized) var UtcPlus95 as ResourceId;
+        (:initialized) var Pressure as ResourceId;
+        (:initialized) var PressureGraphPeriodTitle as ResourceId;
+        (:initialized) var ShowConnectionTitle as ResourceId;
+        (:initialized) var BatteryInDays as ResourceId;
+        (:initialized) var Steps as ResourceId;
+        (:initialized) var UtcPlus1275 as ResourceId;
+        (:initialized) var ArrowTransparent as ResourceId;
+        (:initialized) var ColorLightOrange as ResourceId;
+        (:initialized) var ColorYellow as ResourceId;
+        (:initialized) var UtcPlus85 as ResourceId;
+        (:initialized) var AppName as ResourceId;
+        (:initialized) var fullDialEachSecond as ResourceId;
+        (:initialized) var inhg as ResourceId;
+        (:initialized) var ambientPressure as ResourceId;
+        (:initialized) var fullDialEachThird as ResourceId;
+        (:initialized) var SecondTimeUtcOffsetTitle as ResourceId;
+        (:initialized) var ColorPink as ResourceId;
+        (:initialized) var ColorGreen as ResourceId;
+        (:initialized) var PointIn as ResourceId;
+        (:initialized) var ColorLightGrey as ResourceId;
+        (:initialized) var ColorDarkBlue as ResourceId;
+        (:initialized) var ColorLightRed as ResourceId;
+        (:initialized) var UtcMinus45 as ResourceId;
+        (:initialized) var CurrentTimePointerWidthTitle as ResourceId;
+        (:initialized) var ShowNotificationTitle as ResourceId;
+        (:initialized) var Calories as ResourceId;
+        (:initialized) var Weather as ResourceId;
+        (:initialized) var SmallHoursIndicatorSizeTitle as ResourceId;
+        (:initialized) var ShowSecondsTitle as ResourceId;
+        (:initialized) var NightModeThemeTitle as ResourceId;
+        (:initialized) var Opt3Title as ResourceId;
+        (:initialized) var SunsetSunrise as ResourceId;
+        (:initialized) var ColorLightGreen as ResourceId;
+        (:initialized) var Altitude as ResourceId;
+        (:initialized) var ArrowFilled as ResourceId;
+    } // Strings
+
+    module Styles {
+        module prompt_font_enhanced_readability__body_with_title {
+            const exclude as Boolean = true;
+        } // prompt_font_enhanced_readability__body_with_title
+
+        module system_size__menu_header {
+            const width as Number = 454;
+            const height as Number = 152;
+        } // system_size__menu_header
+
+        module system_loc__hint_button_left_bottom {
+            const x as Number = 17;
+            const y as Number = 300;
+        } // system_loc__hint_button_left_bottom
+
+        module prompt_font_enhanced_readability__body_no_title {
+            const exclude as Boolean = true;
+        } // prompt_font_enhanced_readability__body_no_title
+
+        module prompt_loc__body_no_title {
+            const x as Number = 38;
+            const y as Number = 38;
+        } // prompt_loc__body_no_title
+
+        module system_icon_dark__about {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__about.svg";
+            const compress as String = "true";
+            const dithering as String = "none";
+            const automaticPalette as String = "true";
+        } // system_icon_dark__about
+
+        module system_icon_light__question {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__question.svg";
+            const dithering as String = "none";
+        } // system_icon_light__question
+
+        module system_loc__hint_button_left_top {
+            const exclude as Boolean = true;
+        } // system_loc__hint_button_left_top
+
+        module prompt_font__title {
+            const justification = Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER;
+            const font = Graphics.FONT_XTINY;
+        } // prompt_font__title
+
+        module system_icon_dark__discard {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__discard.svg";
+            const compress as String = "true";
+            const dithering as String = "none";
+            const automaticPalette as String = "true";
+        } // system_icon_dark__discard
+
+        module system_size__menu_item {
+            const width as Number = 454;
+            const height as Number = 152;
+        } // system_size__menu_item
+
+        module system_color_dark__text {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // system_color_dark__text
+
+        module system_icon_destructive__discard {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_destructive__discard.svg";
+            const dithering as String = "none";
+        } // system_icon_destructive__discard
+
+        module system_icon_dark__hint_action_menu {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__hint_button_right_top.svg";
+            const dithering as String = "none";
+        } // system_icon_dark__hint_action_menu
+
+        module prompt_size__title {
+            const width as Number = 363;
+            const height as Number = 69;
+        } // prompt_size__title
+
+        module confirmation_font__body {
+            const justification = Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER;
+            const font = Graphics.FONT_TINY;
+        } // confirmation_font__body
+
+        module system_color_dark__background {
+            const color as Number = 0x000000;
+            const background as Number = 0x000000;
+        } // system_color_dark__background
+
+        module system_icon_destructive__hint_button_left_top {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_destructive__hint_button_left_top.svg";
+            const dithering as String = "none";
+        } // system_icon_destructive__hint_button_left_top
+
+        module system_size__launch_icon {
+            const scaleX as Number = 60;
+            const scaleY as Number = 60;
+            const scaleRelativeTo as String = "screen";
+        } // system_size__launch_icon
+
+        module confirmation_input__confirm {
+            const button = WatchUi.KEY_ENTER;
+        } // confirmation_input__confirm
+
+        module prompt_font__body_with_title {
+            const justification = Graphics.TEXT_JUSTIFY_CENTER;
+            const font = Graphics.FONT_TINY;
+        } // prompt_font__body_with_title
+
+        module confirmation_loc__body {
+            const x as Number = 76;
+            const y as Number = 76;
+        } // confirmation_loc__body
+
+        module system_icon_destructive__hint_button_left_bottom {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_destructive__hint_button_left_bottom.svg";
+            const dithering as String = "none";
+        } // system_icon_destructive__hint_button_left_bottom
+
+        module prompt_color_dark__background {
+            const color as Number = 0x000000;
+            const background as Number = 0x000000;
+        } // prompt_color_dark__background
+
+        module system_icon_destructive__hint_action_menu {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_destructive__hint_button_right_top.svg";
+            const dithering as String = "none";
+        } // system_icon_destructive__hint_action_menu
+
+        module system_loc__hint_action_menu {
+            const x as Number = 393;
+            const y as Number = 84;
+        } // system_loc__hint_action_menu
+
+        module confirmation_icon__hint_confirm {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_completion.svg";
+            const dithering as String = "none";
+        } // confirmation_icon__hint_confirm
+
+        module system_loc__hint_button_left_middle {
+            const x as Number = 4;
+            const y as Number = 189;
+        } // system_loc__hint_button_left_middle
+
+        module prompt_size__body_no_title {
+            const width as Number = 363;
+            const height as Number = 363;
+        } // prompt_size__body_no_title
+
+        module system_icon_light__hint_button_left_top {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__hint_button_left_top.svg";
+            const dithering as String = "none";
+        } // system_icon_light__hint_button_left_top
+
+        module prompt_color_light__background {
+            const color as Number = 0x000000;
+            const background as Number = 0x000000;
+        } // prompt_color_light__background
+
+        module confirmation_input__delete {
+            const button = WatchUi.KEY_ENTER;
+        } // confirmation_input__delete
+
+        module system_icon_dark__hint_button_left_top {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__hint_button_left_top.svg";
+            const dithering as String = "none";
+        } // system_icon_dark__hint_button_left_top
+
+        module system_input__action_menu {
+            const button = WatchUi.KEY_ENTER;
+        } // system_input__action_menu
+
+        module system_icon_light__save {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__save.svg";
+            const dithering as String = "none";
+        } // system_icon_light__save
+
+        module prompt_color_light__body {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // prompt_color_light__body
+
+        module system_loc__subwindow {
+            const exclude as Boolean = true;
+        } // system_loc__subwindow
+
+        module system_icon_light__warning {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__warning.svg";
+            const dithering as String = "none";
+        } // system_icon_light__warning
+
+        module confirmation_color_light__body {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // confirmation_color_light__body
+
+        module confirmation_icon_light__hint_keep {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_keep.svg";
+            const dithering as String = "none";
+        } // confirmation_icon_light__hint_keep
+
+        module activity_color_light__background {
+            const color as Number = 0x000000;
+            const background as Number = 0x000000;
+        } // activity_color_light__background
+
+        module system_icon_positive__hint_button_right_top {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_positive__hint_button_right_top.svg";
+            const dithering as String = "none";
+        } // system_icon_positive__hint_button_right_top
+
+        module system_size__screen {
+            const width as Number = 454;
+            const height as Number = 454;
+        } // system_size__screen
+
+        module system_icon_destructive__hint_button_right_bottom {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_destructive__hint_button_right_bottom.svg";
+            const dithering as String = "none";
+        } // system_icon_destructive__hint_button_right_bottom
+
+        module system_color_light__background {
+            const color as Number = 0x000000;
+            const background as Number = 0x000000;
+        } // system_color_light__background
+
+        module system_icon_destructive__hint_button_right_top {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_destructive__hint_button_right_top.svg";
+            const dithering as String = "none";
+        } // system_icon_destructive__hint_button_right_top
+
+        module confirmation_loc__hint_confirm {
+            const x as Number = 362;
+            const y as Number = 84;
+        } // confirmation_loc__hint_confirm
+
+        module activity_color_dark__text {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // activity_color_dark__text
+
+        module confirmation_input__keep {
+            const button = WatchUi.KEY_DOWN;
+        } // confirmation_input__keep
+
+        module prompt_loc__body_with_title {
+            const x as Number = 38;
+            const y as Number = 115;
+        } // prompt_loc__body_with_title
+
+        module system_icon_dark__search {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__search.svg";
+            const compress as String = "true";
+            const dithering as String = "none";
+            const automaticPalette as String = "true";
+        } // system_icon_dark__search
+
+        module activity_color_light__text {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // activity_color_light__text
+
+        module confirmation_icon__hint_keep {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_keep.svg";
+            const dithering as String = "none";
+        } // confirmation_icon__hint_keep
+
+        module system_icon_dark__save {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__save.svg";
+            const compress as String = "true";
+            const dithering as String = "none";
+            const automaticPalette as String = "true";
+        } // system_icon_dark__save
+
+        module system_icon_destructive__hint_button_left_middle {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_destructive__hint_button_left_middle.svg";
+            const dithering as String = "none";
+        } // system_icon_destructive__hint_button_left_middle
+
+        module system_icon_light__search {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__search.svg";
+            const dithering as String = "none";
+        } // system_icon_light__search
+
+        module system_icon_dark__hint_button_left_bottom {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__hint_button_left_bottom.svg";
+            const dithering as String = "none";
+        } // system_icon_dark__hint_button_left_bottom
+
+        module system_icon_positive__hint_button_left_top {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_positive__hint_button_left_top.svg";
+            const dithering as String = "none";
+        } // system_icon_positive__hint_button_left_top
+
+        module system_loc__hint_button_right_bottom {
+            const x as Number = 393;
+            const y as Number = 300;
+        } // system_loc__hint_button_right_bottom
+
+        module confirmation_icon_dark__hint_reject {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_reject.svg";
+            const dithering as String = "none";
+        } // confirmation_icon_dark__hint_reject
+
+        module confirmation_color_dark__body {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // confirmation_color_dark__body
+
+        module confirmation_icon_light__hint_confirm {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_completion.svg";
+            const dithering as String = "none";
+        } // confirmation_icon_light__hint_confirm
+
+        module prompt_color_dark__title {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // prompt_color_dark__title
+
+        module system_icon_destructive__cancel {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_destructive__cancel.svg";
+            const dithering as String = "none";
+        } // system_icon_destructive__cancel
+
+        module system_icon_light__hint_button_right_bottom {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__hint_button_right_bottom.svg";
+            const dithering as String = "none";
+        } // system_icon_light__hint_button_right_bottom
+
+        module prompt_loc__title {
+            const x as Number = 38;
+            const y as Number = 27;
+        } // prompt_loc__title
+
+        module confirmation_font_enhanced_readability__body {
+            const exclude as Boolean = true;
+        } // confirmation_font_enhanced_readability__body
+
+        module prompt_color_light__title {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // prompt_color_light__title
+
+        module system_icon_dark__hint_button_right_top {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__hint_button_right_top.svg";
+            const dithering as String = "none";
+        } // system_icon_dark__hint_button_right_top
+
+        module system_icon_dark__hint_button_left_middle {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__hint_button_left_middle.svg";
+            const dithering as String = "none";
+        } // system_icon_dark__hint_button_left_middle
+
+        module confirmation_icon_dark__hint_keep {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_keep.svg";
+            const dithering as String = "none";
+        } // confirmation_icon_dark__hint_keep
+
+        module system_icon_light__cancel {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__cancel.svg";
+            const dithering as String = "none";
+        } // system_icon_light__cancel
+
+        module confirmation_icon_light__hint_reject {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_reject.svg";
+            const dithering as String = "none";
+        } // confirmation_icon_light__hint_reject
+
+        module system_icon_light__about {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__about.svg";
+            const dithering as String = "none";
+        } // system_icon_light__about
+
+        module system_size__toast_icon {
+            const scaleX as Number = 61;
+            const scaleY as Number = 61;
+            const scaleRelativeTo as String = "screen";
+        } // system_size__toast_icon
+
+        module system_icon_dark__hint_button_right_middle {
+            const exclude as Boolean = true;
+        } // system_icon_dark__hint_button_right_middle
+
+        module confirmation_icon__hint_reject {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_reject.svg";
+            const dithering as String = "none";
+        } // confirmation_icon__hint_reject
+
+        module system_icon_light__hint_action_menu {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__hint_button_right_top.svg";
+            const dithering as String = "none";
+        } // system_icon_light__hint_action_menu
+
+        module system_icon_light__hint_button_right_middle {
+            const exclude as Boolean = true;
+        } // system_icon_light__hint_button_right_middle
+
+        module system_icon_destructive__hint_button_right_middle {
+            const exclude as Boolean = true;
+        } // system_icon_destructive__hint_button_right_middle
+
+        module confirmation_loc__hint_reject {
+            const x as Number = 17;
+            const y as Number = 300;
+            const horizontalJustification as String = "left";
+        } // confirmation_loc__hint_reject
+
+        module confirmation_icon_dark__hint_delete {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_delete.svg";
+            const dithering as String = "none";
+        } // confirmation_icon_dark__hint_delete
+
+        module activity_color_dark__background {
+            const color as Number = 0x000000;
+            const background as Number = 0x000000;
+        } // activity_color_dark__background
+
+        module system_icon_light__hint_button_left_bottom {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__hint_button_left_bottom.svg";
+            const dithering as String = "none";
+        } // system_icon_light__hint_button_left_bottom
+
+        module system_icon_positive__hint_button_left_middle {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_positive__hint_button_left_middle.svg";
+            const dithering as String = "none";
+        } // system_icon_positive__hint_button_left_middle
+
+        module system_size__menu_icon {
+            const scaleX as Number = 60;
+            const scaleY as Number = 60;
+            const scaleRelativeTo as String = "screen";
+        } // system_size__menu_icon
+
+        module system_icon_destructive__warning {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_destructive__warning.svg";
+            const dithering as String = "none";
+        } // system_icon_destructive__warning
+
+        module system_loc__hint_button_right_middle {
+            const exclude as Boolean = true;
+        } // system_loc__hint_button_right_middle
+
+        module system_icon_dark__cancel {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__cancel.svg";
+            const compress as String = "true";
+            const dithering as String = "none";
+            const automaticPalette as String = "true";
+        } // system_icon_dark__cancel
+
+        module prompt_size__body_with_title {
+            const width as Number = 363;
+            const height as Number = 273;
+        } // prompt_size__body_with_title
+
+        module system_loc__hint_button_right_top {
+            const x as Number = 393;
+            const y as Number = 84;
+        } // system_loc__hint_button_right_top
+
+        module system_color_light__text {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // system_color_light__text
+
+        module system_icon_light__check {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__check.svg";
+            const dithering as String = "none";
+        } // system_icon_light__check
+
+        module confirmation_input__reject {
+            const button = WatchUi.KEY_DOWN;
+        } // confirmation_input__reject
+
+        module system_icon_light__revert {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__revert.svg";
+            const dithering as String = "none";
+        } // system_icon_light__revert
+
+        module system_size__subwindow {
+            const exclude as Boolean = true;
+        } // system_size__subwindow
+
+        module system_icon_positive__hint_button_left_bottom {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_positive__hint_button_left_bottom.svg";
+            const dithering as String = "none";
+        } // system_icon_positive__hint_button_left_bottom
+
+        module system_icon_dark__check {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__check.svg";
+            const compress as String = "true";
+            const dithering as String = "none";
+            const automaticPalette as String = "true";
+        } // system_icon_dark__check
+
+        module confirmation_loc__hint_keep {
+            const x as Number = 17;
+            const y as Number = 300;
+            const horizontalJustification as String = "left";
+        } // confirmation_loc__hint_keep
+
+        module confirmation_loc__hint_delete {
+            const x as Number = 362;
+            const y as Number = 84;
+        } // confirmation_loc__hint_delete
+
+        module system_icon_positive__hint_action_menu {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_positive__hint_button_right_top.svg";
+            const dithering as String = "none";
+        } // system_icon_positive__hint_action_menu
+
+        module system_icon_positive__hint_button_right_middle {
+            const exclude as Boolean = true;
+        } // system_icon_positive__hint_button_right_middle
+
+        module system_icon_light__hint_button_left_middle {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__hint_button_left_middle.svg";
+            const dithering as String = "none";
+        } // system_icon_light__hint_button_left_middle
+
+        module system_icon_dark__hint_button_right_bottom {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__hint_button_right_bottom.svg";
+            const dithering as String = "none";
+        } // system_icon_dark__hint_button_right_bottom
+
+        module system_icon_positive__hint_button_right_bottom {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_positive__hint_button_right_bottom.svg";
+            const dithering as String = "none";
+        } // system_icon_positive__hint_button_right_bottom
+
+        module system_icon_dark__revert {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__revert.svg";
+            const compress as String = "true";
+            const dithering as String = "none";
+            const automaticPalette as String = "true";
+        } // system_icon_dark__revert
+
+        module confirmation_icon_light__hint_delete {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_delete.svg";
+            const dithering as String = "none";
+        } // confirmation_icon_light__hint_delete
+
+        module system_icon_dark__question {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__question.svg";
+            const compress as String = "true";
+            const dithering as String = "none";
+            const automaticPalette as String = "true";
+        } // system_icon_dark__question
+
+        module system_icon_light__discard {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__discard.svg";
+            const dithering as String = "none";
+        } // system_icon_light__discard
+
+        module device_info {
+            const screenWidth as Number = 454;
+            const screenShape = Toybox.System.SCREEN_SHAPE_ROUND;
+            const hasNightMode as Boolean = false;
+            const hasGpu as Boolean = true;
+            const screenHeight as Number = 454;
+            const hasTouchScreen as Boolean = true;
+            const hasEnhancedReadabilityMode as Boolean = false;
+        } // device_info
+
+        module confirmation_icon_dark__hint_confirm {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_completion.svg";
+            const dithering as String = "none";
+        } // confirmation_icon_dark__hint_confirm
+
+        module prompt_font__body_no_title {
+            const justification = Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER;
+            const font = Graphics.FONT_TINY;
+        } // prompt_font__body_no_title
+
+        module prompt_size__title_icon {
+            const scaleX as Float = 0.15;
+            const scaleRelativeTo as String = "screen";
+        } // prompt_size__title_icon
+
+        module system_icon_dark__warning {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_dark__warning.svg";
+            const compress as String = "true";
+            const dithering as String = "none";
+            const automaticPalette as String = "true";
+        } // system_icon_dark__warning
+
+        module prompt_loc__title_icon {
+            const x as Number = 227;
+            const y as Number = 57;
+            const horizontalJustification as String = "center";
+            const verticalJustification as String = "center";
+        } // prompt_loc__title_icon
+
+        module prompt_font_enhanced_readability__title {
+            const exclude as Boolean = true;
+        } // prompt_font_enhanced_readability__title
+
+        module prompt_color_dark__body {
+            const color as Number = 0xFFFFFF;
+            const background = Graphics.COLOR_TRANSPARENT;
+        } // prompt_color_dark__body
+
+        module confirmation_icon__hint_delete {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/confirmation_icon__hint_delete.svg";
+            const dithering as String = "none";
+        } // confirmation_icon__hint_delete
+
+        module system_icon_light__hint_button_right_top {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_light__hint_button_right_top.svg";
+            const dithering as String = "none";
+        } // system_icon_light__hint_button_right_top
+
+        module confirmation_size__body {
+            const width as Number = 273;
+            const height as Number = 273;
+        } // confirmation_size__body
+
+        module system_icon_positive__check {
+            const filename as String = "/Users/cizi/Library/Application Support/Garmin/ConnectIQ/Devices/descentmk351mm/system_icon_positive__check.svg";
+            const dithering as String = "none";
+        } // system_icon_positive__check
+    } // Styles
+} // Rez

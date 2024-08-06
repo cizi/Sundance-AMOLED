@@ -1,0 +1,1926 @@
+[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc"; @line = 1; ]
+using Toybox.Math;
+[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc"; @line = 3; ]
+class UiCalc{
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc"; @line = 6; ]
+    function calculateSmallDialNums(halfWidth) {
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 7 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_stop" ]
+        %angleDeg.1 = local;
+        %tmp.1 = 0;
+        lputv %angleDeg.1 %tmp.1;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 8 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_stop" ]
+        %pointX.2 = local;
+        %tmp.2 = 0;
+        lputv %pointX.2 %tmp.2;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 9 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_stop" ]
+        %pointY.3 = local;
+        %tmp.3 = 0;
+        lputv %pointY.3 %tmp.3;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 10 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_stop" ]
+        %hoursCircle.4 = local;
+        %tmp.5 = lgetv %halfWidth;
+        %tmp.6 = 15;
+        %tmp.7 = sub %tmp.5 %tmp.6;
+        lputv %hoursCircle.4 %tmp.7;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 11 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_stop" ]
+        %angleToNrCorrection.5 = local;
+        %tmp.8 = -6;
+        lputv %angleToNrCorrection.5 %tmp.8;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 12 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_stop" ]
+        %numCoords.6 = local;
+        %tmp.9 = newd 0;
+        lputv %numCoords.6 %tmp.9;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 13 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_stop" ]
+        %hourValue.7 = local;
+        %tmp.10 = null;
+        lputv %hourValue.7 %tmp.10;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 15 4 ]
+        for @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_test @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_incr @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_init:
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_begin" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_end" ]
+        %nr.8 = local;
+        %tmp.11 = 1;
+        lputv %nr.8 %tmp.11;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_test:
+        %tmp.13 = lgetv %nr.8;
+        %tmp.14 = 24;
+        %tmp.15 = lt %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_begin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_36_104_6_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 16 8 ]
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_8_103_8_if_stmt:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_12_16_48_begin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_12_16_34_begin:
+        %tmp.17 = lgetv %nr.8;
+        %tmp.18 = 6;
+        %tmp.19 = ne %tmp.17 %tmp.18;
+        bf %tmp.19 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_8_103_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_25_16_34_true:
+        %tmp.21 = lgetv %nr.8;
+        %tmp.22 = 12;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        push %tmp.23;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_25_16_34_end:
+        %tmp.24 = phi [%tmp.19 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_12_16_34_begin] [%tmp.23 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_25_16_34_true] [%tmp.24 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_25_16_34_end];
+        bf %tmp.24 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_8_103_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_39_16_48_true:
+        %tmp.26 = lgetv %nr.8;
+        %tmp.27 = 18;
+        %tmp.28 = ne %tmp.26 %tmp.27;
+        push %tmp.28;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_39_16_48_end:
+        %tmp.29 = phi [%tmp.24 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_12_16_48_begin] [%tmp.28 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_39_16_48_true] [%tmp.29 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_39_16_48_end];
+        bf %tmp.29 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_8_103_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_8_103_8_if_true:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_51_103_8_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 17 10 ]
+        %tmp.31 = lgetv %nr.8;
+        %tmp.32 = 15;
+        %tmp.33 = mul %tmp.31 %tmp.32;
+        %tmp.34 = getm $.Toybox.Math;
+        %tmp.35 = getv %tmp.34 :PI;
+        %tmp.36 = mul %tmp.33 %tmp.35;
+        %tmp.37 = 180;
+        %tmp.38 = div %tmp.36 %tmp.37;
+        lputv %angleDeg.1 %tmp.38;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 18 10 ]
+        %tmp.40 = lgetv %hoursCircle.4;
+        %tmp.41 = getm $.Toybox.Math;
+        %tmp.42 = getv function %tmp.41 :cos;
+        %tmp.44 = lgetv %angleDeg.1;
+        %tmp.45 = invoke %tmp.41 %tmp.42(%tmp.44);
+        %tmp.46 = mul %tmp.40 %tmp.45;
+        %tmp.48 = lgetv %halfWidth;
+        %tmp.49 = add %tmp.46 %tmp.48;
+        lputv %pointX.2 %tmp.49;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 19 10 ]
+        %tmp.51 = lgetv %hoursCircle.4;
+        %tmp.52 = getm $.Toybox.Math;
+        %tmp.53 = getv function %tmp.52 :sin;
+        %tmp.55 = lgetv %angleDeg.1;
+        %tmp.56 = invoke %tmp.52 %tmp.53(%tmp.55);
+        %tmp.57 = mul %tmp.51 %tmp.56;
+        %tmp.59 = lgetv %halfWidth;
+        %tmp.60 = add %tmp.57 %tmp.59;
+        lputv %pointY.3 %tmp.60;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 21 10 ]
+        %tmp.62 = lgetv %nr.8;
+        %tmp.64 = lgetv %angleToNrCorrection.5;
+        %tmp.65 = add %tmp.62 %tmp.64;
+        lputv %hourValue.7 %tmp.65;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 22 10 ]
+        %tmp.67 = lgetv %hourValue.7;
+        push %tmp.67;
+        switch %tmp.67 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtBegin:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 23 12 ]
+        %tmp.68 = dup %tmp.67;
+        %tmp.69 = 1;
+        %tmp.70 = getv function %tmp.68 :equals;
+        %tmp.71 = invoke %tmp.68 %tmp.70 (%tmp.69);
+        bt %tmp.71 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_23_12_25_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 27 12 ]
+        %tmp.72 = dup %tmp.67;
+        %tmp.73 = 2;
+        %tmp.74 = getv function %tmp.72 :equals;
+        %tmp.75 = invoke %tmp.72 %tmp.74 (%tmp.73);
+        bt %tmp.75 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_27_12_29_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 31 12 ]
+        %tmp.76 = dup %tmp.67;
+        %tmp.77 = 3;
+        %tmp.78 = getv function %tmp.76 :equals;
+        %tmp.79 = invoke %tmp.76 %tmp.78 (%tmp.77);
+        bt %tmp.79 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_31_12_33_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 35 12 ]
+        %tmp.80 = dup %tmp.67;
+        %tmp.81 = 4;
+        %tmp.82 = getv function %tmp.80 :equals;
+        %tmp.83 = invoke %tmp.80 %tmp.82 (%tmp.81);
+        bt %tmp.83 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_35_12_37_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 39 12 ]
+        %tmp.84 = dup %tmp.67;
+        %tmp.85 = 5;
+        %tmp.86 = getv function %tmp.84 :equals;
+        %tmp.87 = invoke %tmp.84 %tmp.86 (%tmp.85);
+        bt %tmp.87 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_39_12_41_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 43 12 ]
+        %tmp.88 = dup %tmp.67;
+        %tmp.89 = 7;
+        %tmp.90 = getv function %tmp.88 :equals;
+        %tmp.91 = invoke %tmp.88 %tmp.90 (%tmp.89);
+        bt %tmp.91 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_43_12_45_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 47 12 ]
+        %tmp.92 = dup %tmp.67;
+        %tmp.93 = 8;
+        %tmp.94 = getv function %tmp.92 :equals;
+        %tmp.95 = invoke %tmp.92 %tmp.94 (%tmp.93);
+        bt %tmp.95 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_47_12_49_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 51 12 ]
+        %tmp.96 = dup %tmp.67;
+        %tmp.97 = 9;
+        %tmp.98 = getv function %tmp.96 :equals;
+        %tmp.99 = invoke %tmp.96 %tmp.98 (%tmp.97);
+        bt %tmp.99 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_51_12_53_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 55 12 ]
+        %tmp.100 = dup %tmp.67;
+        %tmp.101 = 10;
+        %tmp.102 = getv function %tmp.100 :equals;
+        %tmp.103 = invoke %tmp.100 %tmp.102 (%tmp.101);
+        bt %tmp.103 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_55_12_57_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 59 12 ]
+        %tmp.104 = dup %tmp.67;
+        %tmp.105 = 11;
+        %tmp.106 = getv function %tmp.104 :equals;
+        %tmp.107 = invoke %tmp.104 %tmp.106 (%tmp.105);
+        bt %tmp.107 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_59_12_61_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 63 12 ]
+        %tmp.108 = dup %tmp.67;
+        %tmp.109 = 13;
+        %tmp.110 = getv function %tmp.108 :equals;
+        %tmp.111 = invoke %tmp.108 %tmp.110 (%tmp.109);
+        bt %tmp.111 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_63_12_65_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 67 12 ]
+        %tmp.112 = dup %tmp.67;
+        %tmp.113 = 14;
+        %tmp.114 = getv function %tmp.112 :equals;
+        %tmp.115 = invoke %tmp.112 %tmp.114 (%tmp.113);
+        bt %tmp.115 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_67_12_69_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 71 12 ]
+        %tmp.116 = dup %tmp.67;
+        %tmp.117 = 15;
+        %tmp.118 = getv function %tmp.116 :equals;
+        %tmp.119 = invoke %tmp.116 %tmp.118 (%tmp.117);
+        bt %tmp.119 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_71_12_73_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 75 12 ]
+        %tmp.120 = dup %tmp.67;
+        %tmp.121 = 16;
+        %tmp.122 = getv function %tmp.120 :equals;
+        %tmp.123 = invoke %tmp.120 %tmp.122 (%tmp.121);
+        bt %tmp.123 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_75_12_77_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 79 12 ]
+        %tmp.124 = dup %tmp.67;
+        %tmp.125 = 17;
+        %tmp.126 = getv function %tmp.124 :equals;
+        %tmp.127 = invoke %tmp.124 %tmp.126 (%tmp.125);
+        bt %tmp.127 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_79_12_81_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 83 12 ]
+        %tmp.128 = dup %tmp.67;
+        %tmp.129 = -1;
+        %tmp.130 = getv function %tmp.128 :equals;
+        %tmp.131 = invoke %tmp.128 %tmp.130 (%tmp.129);
+        bt %tmp.131 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_83_12_85_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 87 12 ]
+        %tmp.132 = dup %tmp.67;
+        %tmp.133 = -2;
+        %tmp.134 = getv function %tmp.132 :equals;
+        %tmp.135 = invoke %tmp.132 %tmp.134 (%tmp.133);
+        bt %tmp.135 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_87_12_89_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 91 12 ]
+        %tmp.136 = dup %tmp.67;
+        %tmp.137 = -3;
+        %tmp.138 = getv function %tmp.136 :equals;
+        %tmp.139 = invoke %tmp.136 %tmp.138 (%tmp.137);
+        bt %tmp.139 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_91_12_93_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 95 12 ]
+        %tmp.140 = dup %tmp.67;
+        %tmp.141 = -4;
+        %tmp.142 = getv function %tmp.140 :equals;
+        %tmp.143 = invoke %tmp.140 %tmp.142 (%tmp.141);
+        bt %tmp.143 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_95_12_97_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 99 12 ]
+        %tmp.144 = dup %tmp.67;
+        %tmp.145 = -5;
+        %tmp.146 = getv function %tmp.144 :equals;
+        %tmp.147 = invoke %tmp.144 %tmp.146 (%tmp.145);
+        bt %tmp.147 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_99_12_101_17_switchCase;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtDefault:
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_defaultCodeBegin;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_23_12_25_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 24 12 ]
+        %tmp.148 = lgetv %numCoords.6;
+        %tmp.149 = getv function %tmp.148 :put;
+        %tmp.151 = lgetv %hourValue.7;
+        %tmp.152 = newa 2;
+        %tmp.153 = lgetv %pointX.2;
+        %tmp.154 = getv function %tmp.153 :toNumber;
+        %tmp.155 = invoke %tmp.153 %tmp.154();
+        %tmp.156 = dup %tmp.152;
+        %tmp.157 = aputv %tmp.156 0 %tmp.155;
+        %tmp.158 = lgetv %pointY.3;
+        %tmp.159 = getv function %tmp.158 :toNumber;
+        %tmp.160 = invoke %tmp.158 %tmp.159();
+        %tmp.161 = 15;
+        %tmp.162 = sub %tmp.160 %tmp.161;
+        %tmp.163 = dup %tmp.157;
+        %tmp.164 = aputv %tmp.163 1 %tmp.162;
+        invoke %tmp.148 %tmp.149(%tmp.151, %tmp.164);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 25 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_27_12_29_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 28 12 ]
+        %tmp.165 = lgetv %numCoords.6;
+        %tmp.166 = getv function %tmp.165 :put;
+        %tmp.168 = lgetv %hourValue.7;
+        %tmp.169 = newa 2;
+        %tmp.170 = lgetv %pointX.2;
+        %tmp.171 = getv function %tmp.170 :toNumber;
+        %tmp.172 = invoke %tmp.170 %tmp.171();
+        %tmp.173 = 1;
+        %tmp.174 = add %tmp.172 %tmp.173;
+        %tmp.175 = dup %tmp.169;
+        %tmp.176 = aputv %tmp.175 0 %tmp.174;
+        %tmp.177 = lgetv %pointY.3;
+        %tmp.178 = getv function %tmp.177 :toNumber;
+        %tmp.179 = invoke %tmp.177 %tmp.178();
+        %tmp.180 = 14;
+        %tmp.181 = sub %tmp.179 %tmp.180;
+        %tmp.182 = dup %tmp.176;
+        %tmp.183 = aputv %tmp.182 1 %tmp.181;
+        invoke %tmp.165 %tmp.166(%tmp.168, %tmp.183);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 29 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_31_12_33_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 32 12 ]
+        %tmp.184 = lgetv %numCoords.6;
+        %tmp.185 = getv function %tmp.184 :put;
+        %tmp.187 = lgetv %hourValue.7;
+        %tmp.188 = newa 2;
+        %tmp.189 = lgetv %pointX.2;
+        %tmp.190 = getv function %tmp.189 :toNumber;
+        %tmp.191 = invoke %tmp.189 %tmp.190();
+        %tmp.192 = 3;
+        %tmp.193 = add %tmp.191 %tmp.192;
+        %tmp.194 = dup %tmp.188;
+        %tmp.195 = aputv %tmp.194 0 %tmp.193;
+        %tmp.196 = lgetv %pointY.3;
+        %tmp.197 = getv function %tmp.196 :toNumber;
+        %tmp.198 = invoke %tmp.196 %tmp.197();
+        %tmp.199 = 15;
+        %tmp.200 = sub %tmp.198 %tmp.199;
+        %tmp.201 = dup %tmp.195;
+        %tmp.202 = aputv %tmp.201 1 %tmp.200;
+        invoke %tmp.184 %tmp.185(%tmp.187, %tmp.202);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 33 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_35_12_37_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 36 12 ]
+        %tmp.203 = lgetv %numCoords.6;
+        %tmp.204 = getv function %tmp.203 :put;
+        %tmp.206 = lgetv %hourValue.7;
+        %tmp.207 = newa 2;
+        %tmp.208 = lgetv %pointX.2;
+        %tmp.209 = getv function %tmp.208 :toNumber;
+        %tmp.210 = invoke %tmp.208 %tmp.209();
+        %tmp.211 = 5;
+        %tmp.212 = add %tmp.210 %tmp.211;
+        %tmp.213 = dup %tmp.207;
+        %tmp.214 = aputv %tmp.213 0 %tmp.212;
+        %tmp.215 = lgetv %pointY.3;
+        %tmp.216 = getv function %tmp.215 :toNumber;
+        %tmp.217 = invoke %tmp.215 %tmp.216();
+        %tmp.218 = 13;
+        %tmp.219 = sub %tmp.217 %tmp.218;
+        %tmp.220 = dup %tmp.214;
+        %tmp.221 = aputv %tmp.220 1 %tmp.219;
+        invoke %tmp.203 %tmp.204(%tmp.206, %tmp.221);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 37 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_39_12_41_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 40 12 ]
+        %tmp.222 = lgetv %numCoords.6;
+        %tmp.223 = getv function %tmp.222 :put;
+        %tmp.225 = lgetv %hourValue.7;
+        %tmp.226 = newa 2;
+        %tmp.227 = lgetv %pointX.2;
+        %tmp.228 = getv function %tmp.227 :toNumber;
+        %tmp.229 = invoke %tmp.227 %tmp.228();
+        %tmp.230 = 4;
+        %tmp.231 = add %tmp.229 %tmp.230;
+        %tmp.232 = dup %tmp.226;
+        %tmp.233 = aputv %tmp.232 0 %tmp.231;
+        %tmp.234 = lgetv %pointY.3;
+        %tmp.235 = getv function %tmp.234 :toNumber;
+        %tmp.236 = invoke %tmp.234 %tmp.235();
+        %tmp.237 = 14;
+        %tmp.238 = sub %tmp.236 %tmp.237;
+        %tmp.239 = dup %tmp.233;
+        %tmp.240 = aputv %tmp.239 1 %tmp.238;
+        invoke %tmp.222 %tmp.223(%tmp.225, %tmp.240);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 41 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_43_12_45_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 44 12 ]
+        %tmp.241 = lgetv %numCoords.6;
+        %tmp.242 = getv function %tmp.241 :put;
+        %tmp.244 = lgetv %hourValue.7;
+        %tmp.245 = newa 2;
+        %tmp.246 = lgetv %pointX.2;
+        %tmp.247 = getv function %tmp.246 :toNumber;
+        %tmp.248 = invoke %tmp.246 %tmp.247();
+        %tmp.249 = 4;
+        %tmp.250 = add %tmp.248 %tmp.249;
+        %tmp.251 = dup %tmp.245;
+        %tmp.252 = aputv %tmp.251 0 %tmp.250;
+        %tmp.253 = lgetv %pointY.3;
+        %tmp.254 = getv function %tmp.253 :toNumber;
+        %tmp.255 = invoke %tmp.253 %tmp.254();
+        %tmp.256 = 12;
+        %tmp.257 = sub %tmp.255 %tmp.256;
+        %tmp.258 = dup %tmp.252;
+        %tmp.259 = aputv %tmp.258 1 %tmp.257;
+        invoke %tmp.241 %tmp.242(%tmp.244, %tmp.259);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 45 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_47_12_49_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 48 12 ]
+        %tmp.260 = lgetv %numCoords.6;
+        %tmp.261 = getv function %tmp.260 :put;
+        %tmp.263 = lgetv %hourValue.7;
+        %tmp.264 = newa 2;
+        %tmp.265 = lgetv %pointX.2;
+        %tmp.266 = getv function %tmp.265 :toNumber;
+        %tmp.267 = invoke %tmp.265 %tmp.266();
+        %tmp.268 = 4;
+        %tmp.269 = add %tmp.267 %tmp.268;
+        %tmp.270 = dup %tmp.264;
+        %tmp.271 = aputv %tmp.270 0 %tmp.269;
+        %tmp.272 = lgetv %pointY.3;
+        %tmp.273 = getv function %tmp.272 :toNumber;
+        %tmp.274 = invoke %tmp.272 %tmp.273();
+        %tmp.275 = 10;
+        %tmp.276 = sub %tmp.274 %tmp.275;
+        %tmp.277 = dup %tmp.271;
+        %tmp.278 = aputv %tmp.277 1 %tmp.276;
+        invoke %tmp.260 %tmp.261(%tmp.263, %tmp.278);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 49 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_51_12_53_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 52 12 ]
+        %tmp.279 = lgetv %numCoords.6;
+        %tmp.280 = getv function %tmp.279 :put;
+        %tmp.282 = lgetv %hourValue.7;
+        %tmp.283 = newa 2;
+        %tmp.284 = lgetv %pointX.2;
+        %tmp.285 = getv function %tmp.284 :toNumber;
+        %tmp.286 = invoke %tmp.284 %tmp.285();
+        %tmp.287 = 4;
+        %tmp.288 = add %tmp.286 %tmp.287;
+        %tmp.289 = dup %tmp.283;
+        %tmp.290 = aputv %tmp.289 0 %tmp.288;
+        %tmp.291 = lgetv %pointY.3;
+        %tmp.292 = getv function %tmp.291 :toNumber;
+        %tmp.293 = invoke %tmp.291 %tmp.292();
+        %tmp.294 = 8;
+        %tmp.295 = sub %tmp.293 %tmp.294;
+        %tmp.296 = dup %tmp.290;
+        %tmp.297 = aputv %tmp.296 1 %tmp.295;
+        invoke %tmp.279 %tmp.280(%tmp.282, %tmp.297);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 53 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_55_12_57_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 56 12 ]
+        %tmp.298 = lgetv %numCoords.6;
+        %tmp.299 = getv function %tmp.298 :put;
+        %tmp.301 = lgetv %hourValue.7;
+        %tmp.302 = newa 4;
+        %tmp.303 = lgetv %pointX.2;
+        %tmp.304 = getv function %tmp.303 :toNumber;
+        %tmp.305 = invoke %tmp.303 %tmp.304();
+        %tmp.306 = dup %tmp.302;
+        %tmp.307 = aputv %tmp.306 0 %tmp.305;
+        %tmp.308 = lgetv %pointY.3;
+        %tmp.309 = getv function %tmp.308 :toNumber;
+        %tmp.310 = invoke %tmp.308 %tmp.309();
+        %tmp.311 = 7;
+        %tmp.312 = sub %tmp.310 %tmp.311;
+        %tmp.313 = dup %tmp.307;
+        %tmp.314 = aputv %tmp.313 1 %tmp.312;
+        %tmp.315 = lgetv %pointX.2;
+        %tmp.316 = getv function %tmp.315 :toNumber;
+        %tmp.317 = invoke %tmp.315 %tmp.316();
+        %tmp.318 = 6;
+        %tmp.319 = add %tmp.317 %tmp.318;
+        %tmp.320 = dup %tmp.314;
+        %tmp.321 = aputv %tmp.320 2 %tmp.319;
+        %tmp.322 = lgetv %pointY.3;
+        %tmp.323 = getv function %tmp.322 :toNumber;
+        %tmp.324 = invoke %tmp.322 %tmp.323();
+        %tmp.325 = 10;
+        %tmp.326 = sub %tmp.324 %tmp.325;
+        %tmp.327 = dup %tmp.321;
+        %tmp.328 = aputv %tmp.327 3 %tmp.326;
+        invoke %tmp.298 %tmp.299(%tmp.301, %tmp.328);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 57 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_59_12_61_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 60 12 ]
+        %tmp.329 = lgetv %numCoords.6;
+        %tmp.330 = getv function %tmp.329 :put;
+        %tmp.332 = lgetv %hourValue.7;
+        %tmp.333 = newa 4;
+        %tmp.334 = lgetv %pointX.2;
+        %tmp.335 = getv function %tmp.334 :toNumber;
+        %tmp.336 = invoke %tmp.334 %tmp.335();
+        %tmp.337 = 2;
+        %tmp.338 = sub %tmp.336 %tmp.337;
+        %tmp.339 = dup %tmp.333;
+        %tmp.340 = aputv %tmp.339 0 %tmp.338;
+        %tmp.341 = lgetv %pointY.3;
+        %tmp.342 = getv function %tmp.341 :toNumber;
+        %tmp.343 = invoke %tmp.341 %tmp.342();
+        %tmp.344 = 6;
+        %tmp.345 = sub %tmp.343 %tmp.344;
+        %tmp.346 = dup %tmp.340;
+        %tmp.347 = aputv %tmp.346 1 %tmp.345;
+        %tmp.348 = lgetv %pointX.2;
+        %tmp.349 = getv function %tmp.348 :toNumber;
+        %tmp.350 = invoke %tmp.348 %tmp.349();
+        %tmp.351 = 6;
+        %tmp.352 = add %tmp.350 %tmp.351;
+        %tmp.353 = dup %tmp.347;
+        %tmp.354 = aputv %tmp.353 2 %tmp.352;
+        %tmp.355 = lgetv %pointY.3;
+        %tmp.356 = getv function %tmp.355 :toNumber;
+        %tmp.357 = invoke %tmp.355 %tmp.356();
+        %tmp.358 = 8;
+        %tmp.359 = sub %tmp.357 %tmp.358;
+        %tmp.360 = dup %tmp.354;
+        %tmp.361 = aputv %tmp.360 3 %tmp.359;
+        invoke %tmp.329 %tmp.330(%tmp.332, %tmp.361);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 61 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_63_12_65_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 64 12 ]
+        %tmp.362 = lgetv %numCoords.6;
+        %tmp.363 = getv function %tmp.362 :put;
+        %tmp.365 = lgetv %hourValue.7;
+        %tmp.366 = newa 4;
+        %tmp.367 = lgetv %pointX.2;
+        %tmp.368 = getv function %tmp.367 :toNumber;
+        %tmp.369 = invoke %tmp.367 %tmp.368();
+        %tmp.370 = 5;
+        %tmp.371 = sub %tmp.369 %tmp.370;
+        %tmp.372 = dup %tmp.366;
+        %tmp.373 = aputv %tmp.372 0 %tmp.371;
+        %tmp.374 = lgetv %pointY.3;
+        %tmp.375 = getv function %tmp.374 :toNumber;
+        %tmp.376 = invoke %tmp.374 %tmp.375();
+        %tmp.377 = 8;
+        %tmp.378 = sub %tmp.376 %tmp.377;
+        %tmp.379 = dup %tmp.373;
+        %tmp.380 = aputv %tmp.379 1 %tmp.378;
+        %tmp.381 = lgetv %pointX.2;
+        %tmp.382 = getv function %tmp.381 :toNumber;
+        %tmp.383 = invoke %tmp.381 %tmp.382();
+        %tmp.384 = 3;
+        %tmp.385 = add %tmp.383 %tmp.384;
+        %tmp.386 = dup %tmp.380;
+        %tmp.387 = aputv %tmp.386 2 %tmp.385;
+        %tmp.388 = lgetv %pointY.3;
+        %tmp.389 = getv function %tmp.388 :toNumber;
+        %tmp.390 = invoke %tmp.388 %tmp.389();
+        %tmp.391 = 5;
+        %tmp.392 = sub %tmp.390 %tmp.391;
+        %tmp.393 = dup %tmp.387;
+        %tmp.394 = aputv %tmp.393 3 %tmp.392;
+        invoke %tmp.362 %tmp.363(%tmp.365, %tmp.394);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 65 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_67_12_69_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 68 12 ]
+        %tmp.395 = lgetv %numCoords.6;
+        %tmp.396 = getv function %tmp.395 :put;
+        %tmp.398 = lgetv %hourValue.7;
+        %tmp.399 = newa 4;
+        %tmp.400 = lgetv %pointX.2;
+        %tmp.401 = getv function %tmp.400 :toNumber;
+        %tmp.402 = invoke %tmp.400 %tmp.401();
+        %tmp.403 = 6;
+        %tmp.404 = sub %tmp.402 %tmp.403;
+        %tmp.405 = dup %tmp.399;
+        %tmp.406 = aputv %tmp.405 0 %tmp.404;
+        %tmp.407 = lgetv %pointY.3;
+        %tmp.408 = getv function %tmp.407 :toNumber;
+        %tmp.409 = invoke %tmp.407 %tmp.408();
+        %tmp.410 = 10;
+        %tmp.411 = sub %tmp.409 %tmp.410;
+        %tmp.412 = dup %tmp.406;
+        %tmp.413 = aputv %tmp.412 1 %tmp.411;
+        %tmp.414 = lgetv %pointX.2;
+        %tmp.415 = getv function %tmp.414 :toNumber;
+        %tmp.416 = invoke %tmp.414 %tmp.415();
+        %tmp.417 = 2;
+        %tmp.418 = add %tmp.416 %tmp.417;
+        %tmp.419 = dup %tmp.413;
+        %tmp.420 = aputv %tmp.419 2 %tmp.418;
+        %tmp.421 = lgetv %pointY.3;
+        %tmp.422 = getv function %tmp.421 :toNumber;
+        %tmp.423 = invoke %tmp.421 %tmp.422();
+        %tmp.424 = 4;
+        %tmp.425 = sub %tmp.423 %tmp.424;
+        %tmp.426 = dup %tmp.420;
+        %tmp.427 = aputv %tmp.426 3 %tmp.425;
+        invoke %tmp.395 %tmp.396(%tmp.398, %tmp.427);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 69 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_71_12_73_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 72 12 ]
+        %tmp.428 = lgetv %numCoords.6;
+        %tmp.429 = getv function %tmp.428 :put;
+        %tmp.431 = lgetv %hourValue.7;
+        %tmp.432 = newa 4;
+        %tmp.433 = lgetv %pointX.2;
+        %tmp.434 = getv function %tmp.433 :toNumber;
+        %tmp.435 = invoke %tmp.433 %tmp.434();
+        %tmp.436 = 6;
+        %tmp.437 = sub %tmp.435 %tmp.436;
+        %tmp.438 = dup %tmp.432;
+        %tmp.439 = aputv %tmp.438 0 %tmp.437;
+        %tmp.440 = lgetv %pointY.3;
+        %tmp.441 = getv function %tmp.440 :toNumber;
+        %tmp.442 = invoke %tmp.440 %tmp.441();
+        %tmp.443 = 11;
+        %tmp.444 = sub %tmp.442 %tmp.443;
+        %tmp.445 = dup %tmp.439;
+        %tmp.446 = aputv %tmp.445 1 %tmp.444;
+        %tmp.447 = lgetv %pointX.2;
+        %tmp.448 = getv function %tmp.447 :toNumber;
+        %tmp.449 = invoke %tmp.447 %tmp.448();
+        %tmp.450 = dup %tmp.446;
+        %tmp.451 = aputv %tmp.450 2 %tmp.449;
+        %tmp.452 = lgetv %pointY.3;
+        %tmp.453 = getv function %tmp.452 :toNumber;
+        %tmp.454 = invoke %tmp.452 %tmp.453();
+        %tmp.455 = 5;
+        %tmp.456 = sub %tmp.454 %tmp.455;
+        %tmp.457 = dup %tmp.451;
+        %tmp.458 = aputv %tmp.457 3 %tmp.456;
+        invoke %tmp.428 %tmp.429(%tmp.431, %tmp.458);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 73 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_75_12_77_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 76 12 ]
+        %tmp.459 = lgetv %numCoords.6;
+        %tmp.460 = getv function %tmp.459 :put;
+        %tmp.462 = lgetv %hourValue.7;
+        %tmp.463 = newa 4;
+        %tmp.464 = lgetv %pointX.2;
+        %tmp.465 = getv function %tmp.464 :toNumber;
+        %tmp.466 = invoke %tmp.464 %tmp.465();
+        %tmp.467 = 5;
+        %tmp.468 = sub %tmp.466 %tmp.467;
+        %tmp.469 = dup %tmp.463;
+        %tmp.470 = aputv %tmp.469 0 %tmp.468;
+        %tmp.471 = lgetv %pointY.3;
+        %tmp.472 = getv function %tmp.471 :toNumber;
+        %tmp.473 = invoke %tmp.471 %tmp.472();
+        %tmp.474 = 13;
+        %tmp.475 = sub %tmp.473 %tmp.474;
+        %tmp.476 = dup %tmp.470;
+        %tmp.477 = aputv %tmp.476 1 %tmp.475;
+        %tmp.478 = lgetv %pointX.2;
+        %tmp.479 = getv function %tmp.478 :toNumber;
+        %tmp.480 = invoke %tmp.478 %tmp.479();
+        %tmp.481 = 1;
+        %tmp.482 = sub %tmp.480 %tmp.481;
+        %tmp.483 = dup %tmp.477;
+        %tmp.484 = aputv %tmp.483 2 %tmp.482;
+        %tmp.485 = lgetv %pointY.3;
+        %tmp.486 = getv function %tmp.485 :toNumber;
+        %tmp.487 = invoke %tmp.485 %tmp.486();
+        %tmp.488 = 5;
+        %tmp.489 = sub %tmp.487 %tmp.488;
+        %tmp.490 = dup %tmp.484;
+        %tmp.491 = aputv %tmp.490 3 %tmp.489;
+        invoke %tmp.459 %tmp.460(%tmp.462, %tmp.491);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 77 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_79_12_81_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 80 12 ]
+        %tmp.492 = lgetv %numCoords.6;
+        %tmp.493 = getv function %tmp.492 :put;
+        %tmp.495 = lgetv %hourValue.7;
+        %tmp.496 = newa 4;
+        %tmp.497 = lgetv %pointX.2;
+        %tmp.498 = getv function %tmp.497 :toNumber;
+        %tmp.499 = invoke %tmp.497 %tmp.498();
+        %tmp.500 = 5;
+        %tmp.501 = sub %tmp.499 %tmp.500;
+        %tmp.502 = dup %tmp.496;
+        %tmp.503 = aputv %tmp.502 0 %tmp.501;
+        %tmp.504 = lgetv %pointY.3;
+        %tmp.505 = getv function %tmp.504 :toNumber;
+        %tmp.506 = invoke %tmp.504 %tmp.505();
+        %tmp.507 = 15;
+        %tmp.508 = sub %tmp.506 %tmp.507;
+        %tmp.509 = dup %tmp.503;
+        %tmp.510 = aputv %tmp.509 1 %tmp.508;
+        %tmp.511 = lgetv %pointX.2;
+        %tmp.512 = getv function %tmp.511 :toNumber;
+        %tmp.513 = invoke %tmp.511 %tmp.512();
+        %tmp.514 = 3;
+        %tmp.515 = sub %tmp.513 %tmp.514;
+        %tmp.516 = dup %tmp.510;
+        %tmp.517 = aputv %tmp.516 2 %tmp.515;
+        %tmp.518 = lgetv %pointY.3;
+        %tmp.519 = getv function %tmp.518 :toNumber;
+        %tmp.520 = invoke %tmp.518 %tmp.519();
+        %tmp.521 = 6;
+        %tmp.522 = sub %tmp.520 %tmp.521;
+        %tmp.523 = dup %tmp.517;
+        %tmp.524 = aputv %tmp.523 3 %tmp.522;
+        invoke %tmp.492 %tmp.493(%tmp.495, %tmp.524);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 81 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_83_12_85_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 84 12 ]
+        %tmp.525 = lgetv %numCoords.6;
+        %tmp.526 = getv function %tmp.525 :put;
+        %tmp.528 = lgetv %hourValue.7;
+        %tmp.529 = newa 4;
+        %tmp.530 = lgetv %pointX.2;
+        %tmp.531 = getv function %tmp.530 :toNumber;
+        %tmp.532 = invoke %tmp.530 %tmp.531();
+        %tmp.533 = 6;
+        %tmp.534 = sub %tmp.532 %tmp.533;
+        %tmp.535 = dup %tmp.529;
+        %tmp.536 = aputv %tmp.535 0 %tmp.534;
+        %tmp.537 = lgetv %pointY.3;
+        %tmp.538 = getv function %tmp.537 :toNumber;
+        %tmp.539 = invoke %tmp.537 %tmp.538();
+        %tmp.540 = 15;
+        %tmp.541 = sub %tmp.539 %tmp.540;
+        %tmp.542 = dup %tmp.536;
+        %tmp.543 = aputv %tmp.542 1 %tmp.541;
+        %tmp.544 = lgetv %pointX.2;
+        %tmp.545 = getv function %tmp.544 :toNumber;
+        %tmp.546 = invoke %tmp.544 %tmp.545();
+        %tmp.547 = 3;
+        %tmp.548 = add %tmp.546 %tmp.547;
+        %tmp.549 = dup %tmp.543;
+        %tmp.550 = aputv %tmp.549 2 %tmp.548;
+        %tmp.551 = lgetv %pointY.3;
+        %tmp.552 = getv function %tmp.551 :toNumber;
+        %tmp.553 = invoke %tmp.551 %tmp.552();
+        %tmp.554 = 17;
+        %tmp.555 = sub %tmp.553 %tmp.554;
+        %tmp.556 = dup %tmp.550;
+        %tmp.557 = aputv %tmp.556 3 %tmp.555;
+        invoke %tmp.525 %tmp.526(%tmp.528, %tmp.557);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 85 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_87_12_89_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 88 12 ]
+        %tmp.558 = lgetv %numCoords.6;
+        %tmp.559 = getv function %tmp.558 :put;
+        %tmp.561 = lgetv %hourValue.7;
+        %tmp.562 = newa 4;
+        %tmp.563 = lgetv %pointX.2;
+        %tmp.564 = getv function %tmp.563 :toNumber;
+        %tmp.565 = invoke %tmp.563 %tmp.564();
+        %tmp.566 = 5;
+        %tmp.567 = sub %tmp.565 %tmp.566;
+        %tmp.568 = dup %tmp.562;
+        %tmp.569 = aputv %tmp.568 0 %tmp.567;
+        %tmp.570 = lgetv %pointY.3;
+        %tmp.571 = getv function %tmp.570 :toNumber;
+        %tmp.572 = invoke %tmp.570 %tmp.571();
+        %tmp.573 = 12;
+        %tmp.574 = sub %tmp.572 %tmp.573;
+        %tmp.575 = dup %tmp.569;
+        %tmp.576 = aputv %tmp.575 1 %tmp.574;
+        %tmp.577 = lgetv %pointX.2;
+        %tmp.578 = getv function %tmp.577 :toNumber;
+        %tmp.579 = invoke %tmp.577 %tmp.578();
+        %tmp.580 = 4;
+        %tmp.581 = add %tmp.579 %tmp.580;
+        %tmp.582 = dup %tmp.576;
+        %tmp.583 = aputv %tmp.582 2 %tmp.581;
+        %tmp.584 = lgetv %pointY.3;
+        %tmp.585 = getv function %tmp.584 :toNumber;
+        %tmp.586 = invoke %tmp.584 %tmp.585();
+        %tmp.587 = 17;
+        %tmp.588 = sub %tmp.586 %tmp.587;
+        %tmp.589 = dup %tmp.583;
+        %tmp.590 = aputv %tmp.589 3 %tmp.588;
+        invoke %tmp.558 %tmp.559(%tmp.561, %tmp.590);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 89 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_91_12_93_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 92 12 ]
+        %tmp.591 = lgetv %numCoords.6;
+        %tmp.592 = getv function %tmp.591 :put;
+        %tmp.594 = lgetv %hourValue.7;
+        %tmp.595 = newa 4;
+        %tmp.596 = lgetv %pointX.2;
+        %tmp.597 = getv function %tmp.596 :toNumber;
+        %tmp.598 = invoke %tmp.596 %tmp.597();
+        %tmp.599 = 5;
+        %tmp.600 = sub %tmp.598 %tmp.599;
+        %tmp.601 = dup %tmp.595;
+        %tmp.602 = aputv %tmp.601 0 %tmp.600;
+        %tmp.603 = lgetv %pointY.3;
+        %tmp.604 = getv function %tmp.603 :toNumber;
+        %tmp.605 = invoke %tmp.603 %tmp.604();
+        %tmp.606 = 10;
+        %tmp.607 = sub %tmp.605 %tmp.606;
+        %tmp.608 = dup %tmp.602;
+        %tmp.609 = aputv %tmp.608 1 %tmp.607;
+        %tmp.610 = lgetv %pointX.2;
+        %tmp.611 = getv function %tmp.610 :toNumber;
+        %tmp.612 = invoke %tmp.610 %tmp.611();
+        %tmp.613 = 1;
+        %tmp.614 = add %tmp.612 %tmp.613;
+        %tmp.615 = dup %tmp.609;
+        %tmp.616 = aputv %tmp.615 2 %tmp.614;
+        %tmp.617 = lgetv %pointY.3;
+        %tmp.618 = getv function %tmp.617 :toNumber;
+        %tmp.619 = invoke %tmp.617 %tmp.618();
+        %tmp.620 = 18;
+        %tmp.621 = sub %tmp.619 %tmp.620;
+        %tmp.622 = dup %tmp.616;
+        %tmp.623 = aputv %tmp.622 3 %tmp.621;
+        invoke %tmp.591 %tmp.592(%tmp.594, %tmp.623);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 93 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_95_12_97_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 96 12 ]
+        %tmp.624 = lgetv %numCoords.6;
+        %tmp.625 = getv function %tmp.624 :put;
+        %tmp.627 = lgetv %hourValue.7;
+        %tmp.628 = newa 4;
+        %tmp.629 = lgetv %pointX.2;
+        %tmp.630 = getv function %tmp.629 :toNumber;
+        %tmp.631 = invoke %tmp.629 %tmp.630();
+        %tmp.632 = 5;
+        %tmp.633 = sub %tmp.631 %tmp.632;
+        %tmp.634 = dup %tmp.628;
+        %tmp.635 = aputv %tmp.634 0 %tmp.633;
+        %tmp.636 = lgetv %pointY.3;
+        %tmp.637 = getv function %tmp.636 :toNumber;
+        %tmp.638 = invoke %tmp.636 %tmp.637();
+        %tmp.639 = 10;
+        %tmp.640 = sub %tmp.638 %tmp.639;
+        %tmp.641 = dup %tmp.635;
+        %tmp.642 = aputv %tmp.641 1 %tmp.640;
+        %tmp.643 = lgetv %pointX.2;
+        %tmp.644 = getv function %tmp.643 :toNumber;
+        %tmp.645 = invoke %tmp.643 %tmp.644();
+        %tmp.646 = dup %tmp.642;
+        %tmp.647 = aputv %tmp.646 2 %tmp.645;
+        %tmp.648 = lgetv %pointY.3;
+        %tmp.649 = getv function %tmp.648 :toNumber;
+        %tmp.650 = invoke %tmp.648 %tmp.649();
+        %tmp.651 = 19;
+        %tmp.652 = sub %tmp.650 %tmp.651;
+        %tmp.653 = dup %tmp.647;
+        %tmp.654 = aputv %tmp.653 3 %tmp.652;
+        invoke %tmp.624 %tmp.625(%tmp.627, %tmp.654);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 97 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_99_12_101_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 100 12 ]
+        %tmp.655 = lgetv %numCoords.6;
+        %tmp.656 = getv function %tmp.655 :put;
+        %tmp.658 = lgetv %hourValue.7;
+        %tmp.659 = newa 4;
+        %tmp.660 = lgetv %pointX.2;
+        %tmp.661 = getv function %tmp.660 :toNumber;
+        %tmp.662 = invoke %tmp.660 %tmp.661();
+        %tmp.663 = 5;
+        %tmp.664 = sub %tmp.662 %tmp.663;
+        %tmp.665 = dup %tmp.659;
+        %tmp.666 = aputv %tmp.665 0 %tmp.664;
+        %tmp.667 = lgetv %pointY.3;
+        %tmp.668 = getv function %tmp.667 :toNumber;
+        %tmp.669 = invoke %tmp.667 %tmp.668();
+        %tmp.670 = 10;
+        %tmp.671 = sub %tmp.669 %tmp.670;
+        %tmp.672 = dup %tmp.666;
+        %tmp.673 = aputv %tmp.672 1 %tmp.671;
+        %tmp.674 = lgetv %pointX.2;
+        %tmp.675 = getv function %tmp.674 :toNumber;
+        %tmp.676 = invoke %tmp.674 %tmp.675();
+        %tmp.677 = 3;
+        %tmp.678 = sub %tmp.676 %tmp.677;
+        %tmp.679 = dup %tmp.673;
+        %tmp.680 = aputv %tmp.679 2 %tmp.678;
+        %tmp.681 = lgetv %pointY.3;
+        %tmp.682 = getv function %tmp.681 :toNumber;
+        %tmp.683 = invoke %tmp.681 %tmp.682();
+        %tmp.684 = 18;
+        %tmp.685 = sub %tmp.683 %tmp.684;
+        %tmp.686 = dup %tmp.680;
+        %tmp.687 = aputv %tmp.686 3 %tmp.685;
+        invoke %tmp.655 %tmp.656(%tmp.658, %tmp.687);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 101 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_defaultCodeBegin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_22_10_102_10_switchStmtEnd:
+        pop;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_51_103_8_stop:
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_8_103_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_16_8_103_8_if_end:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_36_104_6_stop:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_incr:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 15 ]
+        %tmp.688 = lgetv %nr.8;
+        %tmp.689 = 1;
+        %tmp.690 = add %tmp.688 %tmp.689;
+        lputv %nr.8 %tmp.690;
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_test;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_15_4_104_6_for_end:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 106 4 ]
+        %tmp.692 = lgetv %numCoords.6;
+        ret %tmp.692;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_stop:
+    }
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc"; @line = 110; ]
+    function calculateSmallDialNumsForBuildInBezel(halfWidth) {
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 111 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_stop" ]
+        %angleDeg.1 = local;
+        %tmp.1 = 0;
+        lputv %angleDeg.1 %tmp.1;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 112 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_stop" ]
+        %pointX.2 = local;
+        %tmp.2 = 0;
+        lputv %pointX.2 %tmp.2;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 113 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_stop" ]
+        %pointY.3 = local;
+        %tmp.3 = 0;
+        lputv %pointY.3 %tmp.3;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 114 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_stop" ]
+        %hoursCircle.4 = local;
+        %tmp.5 = lgetv %halfWidth;
+        %tmp.6 = 15;
+        %tmp.7 = sub %tmp.5 %tmp.6;
+        lputv %hoursCircle.4 %tmp.7;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 115 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_stop" ]
+        %angleToNrCorrection.5 = local;
+        %tmp.8 = -6;
+        lputv %angleToNrCorrection.5 %tmp.8;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 116 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_stop" ]
+        %numCoords.6 = local;
+        %tmp.9 = newd 0;
+        lputv %numCoords.6 %tmp.9;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 117 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_stop" ]
+        %hourValue.7 = local;
+        %tmp.10 = null;
+        lputv %hourValue.7 %tmp.10;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 119 4 ]
+        for @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_test @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_incr @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_init:
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_begin" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_end" ]
+        %nr.8 = local;
+        %tmp.11 = 1;
+        lputv %nr.8 %tmp.11;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_test:
+        %tmp.13 = lgetv %nr.8;
+        %tmp.14 = 24;
+        %tmp.15 = lt %tmp.13 %tmp.14;
+        bf %tmp.15 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_begin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_36_208_6_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 120 8 ]
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_8_207_8_if_stmt:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_12_120_48_begin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_12_120_34_begin:
+        %tmp.17 = lgetv %nr.8;
+        %tmp.18 = 6;
+        %tmp.19 = ne %tmp.17 %tmp.18;
+        bf %tmp.19 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_8_207_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_25_120_34_true:
+        %tmp.21 = lgetv %nr.8;
+        %tmp.22 = 12;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        push %tmp.23;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_25_120_34_end:
+        %tmp.24 = phi [%tmp.19 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_12_120_34_begin] [%tmp.23 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_25_120_34_true] [%tmp.24 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_25_120_34_end];
+        bf %tmp.24 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_8_207_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_39_120_48_true:
+        %tmp.26 = lgetv %nr.8;
+        %tmp.27 = 18;
+        %tmp.28 = ne %tmp.26 %tmp.27;
+        push %tmp.28;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_39_120_48_end:
+        %tmp.29 = phi [%tmp.24 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_12_120_48_begin] [%tmp.28 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_39_120_48_true] [%tmp.29 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_39_120_48_end];
+        bf %tmp.29 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_8_207_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_8_207_8_if_true:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_51_207_8_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 121 10 ]
+        %tmp.31 = lgetv %nr.8;
+        %tmp.32 = 15;
+        %tmp.33 = mul %tmp.31 %tmp.32;
+        %tmp.34 = getm $.Toybox.Math;
+        %tmp.35 = getv %tmp.34 :PI;
+        %tmp.36 = mul %tmp.33 %tmp.35;
+        %tmp.37 = 180;
+        %tmp.38 = div %tmp.36 %tmp.37;
+        lputv %angleDeg.1 %tmp.38;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 122 10 ]
+        %tmp.40 = lgetv %hoursCircle.4;
+        %tmp.41 = getm $.Toybox.Math;
+        %tmp.42 = getv function %tmp.41 :cos;
+        %tmp.44 = lgetv %angleDeg.1;
+        %tmp.45 = invoke %tmp.41 %tmp.42(%tmp.44);
+        %tmp.46 = mul %tmp.40 %tmp.45;
+        %tmp.48 = lgetv %halfWidth;
+        %tmp.49 = add %tmp.46 %tmp.48;
+        lputv %pointX.2 %tmp.49;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 123 10 ]
+        %tmp.51 = lgetv %hoursCircle.4;
+        %tmp.52 = getm $.Toybox.Math;
+        %tmp.53 = getv function %tmp.52 :sin;
+        %tmp.55 = lgetv %angleDeg.1;
+        %tmp.56 = invoke %tmp.52 %tmp.53(%tmp.55);
+        %tmp.57 = mul %tmp.51 %tmp.56;
+        %tmp.59 = lgetv %halfWidth;
+        %tmp.60 = add %tmp.57 %tmp.59;
+        lputv %pointY.3 %tmp.60;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 125 10 ]
+        %tmp.62 = lgetv %nr.8;
+        %tmp.64 = lgetv %angleToNrCorrection.5;
+        %tmp.65 = add %tmp.62 %tmp.64;
+        lputv %hourValue.7 %tmp.65;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 126 10 ]
+        %tmp.67 = lgetv %hourValue.7;
+        push %tmp.67;
+        switch %tmp.67 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtBegin:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 127 12 ]
+        %tmp.68 = dup %tmp.67;
+        %tmp.69 = 1;
+        %tmp.70 = getv function %tmp.68 :equals;
+        %tmp.71 = invoke %tmp.68 %tmp.70 (%tmp.69);
+        bt %tmp.71 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_127_12_129_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 131 12 ]
+        %tmp.72 = dup %tmp.67;
+        %tmp.73 = 2;
+        %tmp.74 = getv function %tmp.72 :equals;
+        %tmp.75 = invoke %tmp.72 %tmp.74 (%tmp.73);
+        bt %tmp.75 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_131_12_133_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 135 12 ]
+        %tmp.76 = dup %tmp.67;
+        %tmp.77 = 3;
+        %tmp.78 = getv function %tmp.76 :equals;
+        %tmp.79 = invoke %tmp.76 %tmp.78 (%tmp.77);
+        bt %tmp.79 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_135_12_137_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 139 12 ]
+        %tmp.80 = dup %tmp.67;
+        %tmp.81 = 4;
+        %tmp.82 = getv function %tmp.80 :equals;
+        %tmp.83 = invoke %tmp.80 %tmp.82 (%tmp.81);
+        bt %tmp.83 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_139_12_141_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 143 12 ]
+        %tmp.84 = dup %tmp.67;
+        %tmp.85 = 5;
+        %tmp.86 = getv function %tmp.84 :equals;
+        %tmp.87 = invoke %tmp.84 %tmp.86 (%tmp.85);
+        bt %tmp.87 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_143_12_145_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 147 12 ]
+        %tmp.88 = dup %tmp.67;
+        %tmp.89 = 7;
+        %tmp.90 = getv function %tmp.88 :equals;
+        %tmp.91 = invoke %tmp.88 %tmp.90 (%tmp.89);
+        bt %tmp.91 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_147_12_149_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 151 12 ]
+        %tmp.92 = dup %tmp.67;
+        %tmp.93 = 8;
+        %tmp.94 = getv function %tmp.92 :equals;
+        %tmp.95 = invoke %tmp.92 %tmp.94 (%tmp.93);
+        bt %tmp.95 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_151_12_153_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 155 12 ]
+        %tmp.96 = dup %tmp.67;
+        %tmp.97 = 9;
+        %tmp.98 = getv function %tmp.96 :equals;
+        %tmp.99 = invoke %tmp.96 %tmp.98 (%tmp.97);
+        bt %tmp.99 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_155_12_157_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 159 12 ]
+        %tmp.100 = dup %tmp.67;
+        %tmp.101 = 10;
+        %tmp.102 = getv function %tmp.100 :equals;
+        %tmp.103 = invoke %tmp.100 %tmp.102 (%tmp.101);
+        bt %tmp.103 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_159_12_161_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 163 12 ]
+        %tmp.104 = dup %tmp.67;
+        %tmp.105 = 11;
+        %tmp.106 = getv function %tmp.104 :equals;
+        %tmp.107 = invoke %tmp.104 %tmp.106 (%tmp.105);
+        bt %tmp.107 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_163_12_165_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 167 12 ]
+        %tmp.108 = dup %tmp.67;
+        %tmp.109 = 13;
+        %tmp.110 = getv function %tmp.108 :equals;
+        %tmp.111 = invoke %tmp.108 %tmp.110 (%tmp.109);
+        bt %tmp.111 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_167_12_169_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 171 12 ]
+        %tmp.112 = dup %tmp.67;
+        %tmp.113 = 14;
+        %tmp.114 = getv function %tmp.112 :equals;
+        %tmp.115 = invoke %tmp.112 %tmp.114 (%tmp.113);
+        bt %tmp.115 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_171_12_173_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 175 12 ]
+        %tmp.116 = dup %tmp.67;
+        %tmp.117 = 15;
+        %tmp.118 = getv function %tmp.116 :equals;
+        %tmp.119 = invoke %tmp.116 %tmp.118 (%tmp.117);
+        bt %tmp.119 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_175_12_177_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 179 12 ]
+        %tmp.120 = dup %tmp.67;
+        %tmp.121 = 16;
+        %tmp.122 = getv function %tmp.120 :equals;
+        %tmp.123 = invoke %tmp.120 %tmp.122 (%tmp.121);
+        bt %tmp.123 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_179_12_181_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 183 12 ]
+        %tmp.124 = dup %tmp.67;
+        %tmp.125 = 17;
+        %tmp.126 = getv function %tmp.124 :equals;
+        %tmp.127 = invoke %tmp.124 %tmp.126 (%tmp.125);
+        bt %tmp.127 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_183_12_185_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 187 12 ]
+        %tmp.128 = dup %tmp.67;
+        %tmp.129 = -1;
+        %tmp.130 = getv function %tmp.128 :equals;
+        %tmp.131 = invoke %tmp.128 %tmp.130 (%tmp.129);
+        bt %tmp.131 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_187_12_189_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 191 12 ]
+        %tmp.132 = dup %tmp.67;
+        %tmp.133 = -2;
+        %tmp.134 = getv function %tmp.132 :equals;
+        %tmp.135 = invoke %tmp.132 %tmp.134 (%tmp.133);
+        bt %tmp.135 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_191_12_193_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 195 12 ]
+        %tmp.136 = dup %tmp.67;
+        %tmp.137 = -3;
+        %tmp.138 = getv function %tmp.136 :equals;
+        %tmp.139 = invoke %tmp.136 %tmp.138 (%tmp.137);
+        bt %tmp.139 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_195_12_197_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 199 12 ]
+        %tmp.140 = dup %tmp.67;
+        %tmp.141 = -4;
+        %tmp.142 = getv function %tmp.140 :equals;
+        %tmp.143 = invoke %tmp.140 %tmp.142 (%tmp.141);
+        bt %tmp.143 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_199_12_201_17_switchCase;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 203 12 ]
+        %tmp.144 = dup %tmp.67;
+        %tmp.145 = -5;
+        %tmp.146 = getv function %tmp.144 :equals;
+        %tmp.147 = invoke %tmp.144 %tmp.146 (%tmp.145);
+        bt %tmp.147 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_203_12_205_17_switchCase;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtDefault:
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_defaultCodeBegin;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_127_12_129_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 128 12 ]
+        %tmp.148 = lgetv %numCoords.6;
+        %tmp.149 = getv function %tmp.148 :put;
+        %tmp.151 = lgetv %hourValue.7;
+        %tmp.152 = newa 4;
+        %tmp.153 = lgetv %pointX.2;
+        %tmp.154 = getv function %tmp.153 :toNumber;
+        %tmp.155 = invoke %tmp.153 %tmp.154();
+        %tmp.156 = 2;
+        %tmp.157 = sub %tmp.155 %tmp.156;
+        %tmp.158 = dup %tmp.152;
+        %tmp.159 = aputv %tmp.158 0 %tmp.157;
+        %tmp.160 = lgetv %pointY.3;
+        %tmp.161 = getv function %tmp.160 :toNumber;
+        %tmp.162 = invoke %tmp.160 %tmp.161();
+        %tmp.163 = 16;
+        %tmp.164 = sub %tmp.162 %tmp.163;
+        %tmp.165 = dup %tmp.159;
+        %tmp.166 = aputv %tmp.165 1 %tmp.164;
+        %tmp.167 = lgetv %pointX.2;
+        %tmp.168 = getv function %tmp.167 :toNumber;
+        %tmp.169 = invoke %tmp.167 %tmp.168();
+        %tmp.170 = 7;
+        %tmp.171 = add %tmp.169 %tmp.170;
+        %tmp.172 = dup %tmp.166;
+        %tmp.173 = aputv %tmp.172 2 %tmp.171;
+        %tmp.174 = lgetv %pointY.3;
+        %tmp.175 = getv function %tmp.174 :toNumber;
+        %tmp.176 = invoke %tmp.174 %tmp.175();
+        %tmp.177 = 14;
+        %tmp.178 = sub %tmp.176 %tmp.177;
+        %tmp.179 = dup %tmp.173;
+        %tmp.180 = aputv %tmp.179 3 %tmp.178;
+        invoke %tmp.148 %tmp.149(%tmp.151, %tmp.180);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 129 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_131_12_133_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 132 12 ]
+        %tmp.181 = lgetv %numCoords.6;
+        %tmp.182 = getv function %tmp.181 :put;
+        %tmp.184 = lgetv %hourValue.7;
+        %tmp.185 = newa 4;
+        %tmp.186 = lgetv %pointX.2;
+        %tmp.187 = getv function %tmp.186 :toNumber;
+        %tmp.188 = invoke %tmp.186 %tmp.187();
+        %tmp.189 = 2;
+        %tmp.190 = sub %tmp.188 %tmp.189;
+        %tmp.191 = dup %tmp.185;
+        %tmp.192 = aputv %tmp.191 0 %tmp.190;
+        %tmp.193 = lgetv %pointY.3;
+        %tmp.194 = getv function %tmp.193 :toNumber;
+        %tmp.195 = invoke %tmp.193 %tmp.194();
+        %tmp.196 = 17;
+        %tmp.197 = sub %tmp.195 %tmp.196;
+        %tmp.198 = dup %tmp.192;
+        %tmp.199 = aputv %tmp.198 1 %tmp.197;
+        %tmp.200 = lgetv %pointX.2;
+        %tmp.201 = getv function %tmp.200 :toNumber;
+        %tmp.202 = invoke %tmp.200 %tmp.201();
+        %tmp.203 = 6;
+        %tmp.204 = add %tmp.202 %tmp.203;
+        %tmp.205 = dup %tmp.199;
+        %tmp.206 = aputv %tmp.205 2 %tmp.204;
+        %tmp.207 = lgetv %pointY.3;
+        %tmp.208 = getv function %tmp.207 :toNumber;
+        %tmp.209 = invoke %tmp.207 %tmp.208();
+        %tmp.210 = 12;
+        %tmp.211 = sub %tmp.209 %tmp.210;
+        %tmp.212 = dup %tmp.206;
+        %tmp.213 = aputv %tmp.212 3 %tmp.211;
+        invoke %tmp.181 %tmp.182(%tmp.184, %tmp.213);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 133 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_135_12_137_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 136 12 ]
+        %tmp.214 = lgetv %numCoords.6;
+        %tmp.215 = getv function %tmp.214 :put;
+        %tmp.217 = lgetv %hourValue.7;
+        %tmp.218 = newa 4;
+        %tmp.219 = lgetv %pointX.2;
+        %tmp.220 = getv function %tmp.219 :toNumber;
+        %tmp.221 = invoke %tmp.219 %tmp.220();
+        %tmp.222 = dup %tmp.218;
+        %tmp.223 = aputv %tmp.222 0 %tmp.221;
+        %tmp.224 = lgetv %pointY.3;
+        %tmp.225 = getv function %tmp.224 :toNumber;
+        %tmp.226 = invoke %tmp.224 %tmp.225();
+        %tmp.227 = 16;
+        %tmp.228 = sub %tmp.226 %tmp.227;
+        %tmp.229 = dup %tmp.223;
+        %tmp.230 = aputv %tmp.229 1 %tmp.228;
+        %tmp.231 = lgetv %pointX.2;
+        %tmp.232 = getv function %tmp.231 :toNumber;
+        %tmp.233 = invoke %tmp.231 %tmp.232();
+        %tmp.234 = 8;
+        %tmp.235 = add %tmp.233 %tmp.234;
+        %tmp.236 = dup %tmp.230;
+        %tmp.237 = aputv %tmp.236 2 %tmp.235;
+        %tmp.238 = lgetv %pointY.3;
+        %tmp.239 = getv function %tmp.238 :toNumber;
+        %tmp.240 = invoke %tmp.238 %tmp.239();
+        %tmp.241 = 11;
+        %tmp.242 = sub %tmp.240 %tmp.241;
+        %tmp.243 = dup %tmp.237;
+        %tmp.244 = aputv %tmp.243 3 %tmp.242;
+        invoke %tmp.214 %tmp.215(%tmp.217, %tmp.244);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 137 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_139_12_141_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 140 12 ]
+        %tmp.245 = lgetv %numCoords.6;
+        %tmp.246 = getv function %tmp.245 :put;
+        %tmp.248 = lgetv %hourValue.7;
+        %tmp.249 = newa 4;
+        %tmp.250 = lgetv %pointX.2;
+        %tmp.251 = getv function %tmp.250 :toNumber;
+        %tmp.252 = invoke %tmp.250 %tmp.251();
+        %tmp.253 = 2;
+        %tmp.254 = add %tmp.252 %tmp.253;
+        %tmp.255 = dup %tmp.249;
+        %tmp.256 = aputv %tmp.255 0 %tmp.254;
+        %tmp.257 = lgetv %pointY.3;
+        %tmp.258 = getv function %tmp.257 :toNumber;
+        %tmp.259 = invoke %tmp.257 %tmp.258();
+        %tmp.260 = 16;
+        %tmp.261 = sub %tmp.259 %tmp.260;
+        %tmp.262 = dup %tmp.256;
+        %tmp.263 = aputv %tmp.262 1 %tmp.261;
+        %tmp.264 = lgetv %pointX.2;
+        %tmp.265 = getv function %tmp.264 :toNumber;
+        %tmp.266 = invoke %tmp.264 %tmp.265();
+        %tmp.267 = 7;
+        %tmp.268 = add %tmp.266 %tmp.267;
+        %tmp.269 = dup %tmp.263;
+        %tmp.270 = aputv %tmp.269 2 %tmp.268;
+        %tmp.271 = lgetv %pointY.3;
+        %tmp.272 = getv function %tmp.271 :toNumber;
+        %tmp.273 = invoke %tmp.271 %tmp.272();
+        %tmp.274 = 8;
+        %tmp.275 = sub %tmp.273 %tmp.274;
+        %tmp.276 = dup %tmp.270;
+        %tmp.277 = aputv %tmp.276 3 %tmp.275;
+        invoke %tmp.245 %tmp.246(%tmp.248, %tmp.277);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 141 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_143_12_145_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 144 12 ]
+        %tmp.278 = lgetv %numCoords.6;
+        %tmp.279 = getv function %tmp.278 :put;
+        %tmp.281 = lgetv %hourValue.7;
+        %tmp.282 = newa 4;
+        %tmp.283 = lgetv %pointX.2;
+        %tmp.284 = getv function %tmp.283 :toNumber;
+        %tmp.285 = invoke %tmp.283 %tmp.284();
+        %tmp.286 = 4;
+        %tmp.287 = add %tmp.285 %tmp.286;
+        %tmp.288 = dup %tmp.282;
+        %tmp.289 = aputv %tmp.288 0 %tmp.287;
+        %tmp.290 = lgetv %pointY.3;
+        %tmp.291 = getv function %tmp.290 :toNumber;
+        %tmp.292 = invoke %tmp.290 %tmp.291();
+        %tmp.293 = 14;
+        %tmp.294 = sub %tmp.292 %tmp.293;
+        %tmp.295 = dup %tmp.289;
+        %tmp.296 = aputv %tmp.295 1 %tmp.294;
+        %tmp.297 = lgetv %pointX.2;
+        %tmp.298 = getv function %tmp.297 :toNumber;
+        %tmp.299 = invoke %tmp.297 %tmp.298();
+        %tmp.300 = 8;
+        %tmp.301 = add %tmp.299 %tmp.300;
+        %tmp.302 = dup %tmp.296;
+        %tmp.303 = aputv %tmp.302 2 %tmp.301;
+        %tmp.304 = lgetv %pointY.3;
+        %tmp.305 = getv function %tmp.304 :toNumber;
+        %tmp.306 = invoke %tmp.304 %tmp.305();
+        %tmp.307 = 8;
+        %tmp.308 = sub %tmp.306 %tmp.307;
+        %tmp.309 = dup %tmp.303;
+        %tmp.310 = aputv %tmp.309 3 %tmp.308;
+        invoke %tmp.278 %tmp.279(%tmp.281, %tmp.310);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 145 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_147_12_149_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 148 12 ]
+        %tmp.311 = lgetv %numCoords.6;
+        %tmp.312 = getv function %tmp.311 :put;
+        %tmp.314 = lgetv %hourValue.7;
+        %tmp.315 = newa 4;
+        %tmp.316 = lgetv %pointX.2;
+        %tmp.317 = getv function %tmp.316 :toNumber;
+        %tmp.318 = invoke %tmp.316 %tmp.317();
+        %tmp.319 = 3;
+        %tmp.320 = add %tmp.318 %tmp.319;
+        %tmp.321 = dup %tmp.315;
+        %tmp.322 = aputv %tmp.321 0 %tmp.320;
+        %tmp.323 = lgetv %pointY.3;
+        %tmp.324 = getv function %tmp.323 :toNumber;
+        %tmp.325 = invoke %tmp.323 %tmp.324();
+        %tmp.326 = 2;
+        %tmp.327 = sub %tmp.325 %tmp.326;
+        %tmp.328 = dup %tmp.322;
+        %tmp.329 = aputv %tmp.328 1 %tmp.327;
+        %tmp.330 = lgetv %pointX.2;
+        %tmp.331 = getv function %tmp.330 :toNumber;
+        %tmp.332 = invoke %tmp.330 %tmp.331();
+        %tmp.333 = 7;
+        %tmp.334 = add %tmp.332 %tmp.333;
+        %tmp.335 = dup %tmp.329;
+        %tmp.336 = aputv %tmp.335 2 %tmp.334;
+        %tmp.337 = lgetv %pointY.3;
+        %tmp.338 = getv function %tmp.337 :toNumber;
+        %tmp.339 = invoke %tmp.337 %tmp.338();
+        %tmp.340 = 13;
+        %tmp.341 = sub %tmp.339 %tmp.340;
+        %tmp.342 = dup %tmp.336;
+        %tmp.343 = aputv %tmp.342 3 %tmp.341;
+        invoke %tmp.311 %tmp.312(%tmp.314, %tmp.343);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 149 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_151_12_153_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 152 12 ]
+        %tmp.344 = lgetv %numCoords.6;
+        %tmp.345 = getv function %tmp.344 :put;
+        %tmp.347 = lgetv %hourValue.7;
+        %tmp.348 = newa 4;
+        %tmp.349 = lgetv %pointX.2;
+        %tmp.350 = getv function %tmp.349 :toNumber;
+        %tmp.351 = invoke %tmp.349 %tmp.350();
+        %tmp.352 = 2;
+        %tmp.353 = add %tmp.351 %tmp.352;
+        %tmp.354 = dup %tmp.348;
+        %tmp.355 = aputv %tmp.354 0 %tmp.353;
+        %tmp.356 = lgetv %pointY.3;
+        %tmp.357 = getv function %tmp.356 :toNumber;
+        %tmp.358 = invoke %tmp.356 %tmp.357();
+        %tmp.359 = 3;
+        %tmp.360 = sub %tmp.358 %tmp.359;
+        %tmp.361 = dup %tmp.355;
+        %tmp.362 = aputv %tmp.361 1 %tmp.360;
+        %tmp.363 = lgetv %pointX.2;
+        %tmp.364 = getv function %tmp.363 :toNumber;
+        %tmp.365 = invoke %tmp.363 %tmp.364();
+        %tmp.366 = 9;
+        %tmp.367 = add %tmp.365 %tmp.366;
+        %tmp.368 = dup %tmp.362;
+        %tmp.369 = aputv %tmp.368 2 %tmp.367;
+        %tmp.370 = lgetv %pointY.3;
+        %tmp.371 = getv function %tmp.370 :toNumber;
+        %tmp.372 = invoke %tmp.370 %tmp.371();
+        %tmp.373 = 13;
+        %tmp.374 = sub %tmp.372 %tmp.373;
+        %tmp.375 = dup %tmp.369;
+        %tmp.376 = aputv %tmp.375 3 %tmp.374;
+        invoke %tmp.344 %tmp.345(%tmp.347, %tmp.376);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 153 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_155_12_157_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 156 12 ]
+        %tmp.377 = lgetv %numCoords.6;
+        %tmp.378 = getv function %tmp.377 :put;
+        %tmp.380 = lgetv %hourValue.7;
+        %tmp.381 = newa 4;
+        %tmp.382 = lgetv %pointX.2;
+        %tmp.383 = getv function %tmp.382 :toNumber;
+        %tmp.384 = invoke %tmp.382 %tmp.383();
+        %tmp.385 = 2;
+        %tmp.386 = add %tmp.384 %tmp.385;
+        %tmp.387 = dup %tmp.381;
+        %tmp.388 = aputv %tmp.387 0 %tmp.386;
+        %tmp.389 = lgetv %pointY.3;
+        %tmp.390 = getv function %tmp.389 :toNumber;
+        %tmp.391 = invoke %tmp.389 %tmp.390();
+        %tmp.392 = 3;
+        %tmp.393 = sub %tmp.391 %tmp.392;
+        %tmp.394 = dup %tmp.388;
+        %tmp.395 = aputv %tmp.394 1 %tmp.393;
+        %tmp.396 = lgetv %pointX.2;
+        %tmp.397 = getv function %tmp.396 :toNumber;
+        %tmp.398 = invoke %tmp.396 %tmp.397();
+        %tmp.399 = 11;
+        %tmp.400 = add %tmp.398 %tmp.399;
+        %tmp.401 = dup %tmp.395;
+        %tmp.402 = aputv %tmp.401 2 %tmp.400;
+        %tmp.403 = lgetv %pointY.3;
+        %tmp.404 = getv function %tmp.403 :toNumber;
+        %tmp.405 = invoke %tmp.403 %tmp.404();
+        %tmp.406 = 10;
+        %tmp.407 = sub %tmp.405 %tmp.406;
+        %tmp.408 = dup %tmp.402;
+        %tmp.409 = aputv %tmp.408 3 %tmp.407;
+        invoke %tmp.377 %tmp.378(%tmp.380, %tmp.409);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 157 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_159_12_161_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 160 12 ]
+        %tmp.410 = lgetv %numCoords.6;
+        %tmp.411 = getv function %tmp.410 :put;
+        %tmp.413 = lgetv %hourValue.7;
+        %tmp.414 = newa 4;
+        %tmp.415 = lgetv %pointX.2;
+        %tmp.416 = getv function %tmp.415 :toNumber;
+        %tmp.417 = invoke %tmp.415 %tmp.416();
+        %tmp.418 = 1;
+        %tmp.419 = sub %tmp.417 %tmp.418;
+        %tmp.420 = dup %tmp.414;
+        %tmp.421 = aputv %tmp.420 0 %tmp.419;
+        %tmp.422 = lgetv %pointY.3;
+        %tmp.423 = getv function %tmp.422 :toNumber;
+        %tmp.424 = invoke %tmp.422 %tmp.423();
+        %tmp.425 = 3;
+        %tmp.426 = sub %tmp.424 %tmp.425;
+        %tmp.427 = dup %tmp.421;
+        %tmp.428 = aputv %tmp.427 1 %tmp.426;
+        %tmp.429 = lgetv %pointX.2;
+        %tmp.430 = getv function %tmp.429 :toNumber;
+        %tmp.431 = invoke %tmp.429 %tmp.430();
+        %tmp.432 = 8;
+        %tmp.433 = add %tmp.431 %tmp.432;
+        %tmp.434 = dup %tmp.428;
+        %tmp.435 = aputv %tmp.434 2 %tmp.433;
+        %tmp.436 = lgetv %pointY.3;
+        %tmp.437 = getv function %tmp.436 :toNumber;
+        %tmp.438 = invoke %tmp.436 %tmp.437();
+        %tmp.439 = 8;
+        %tmp.440 = sub %tmp.438 %tmp.439;
+        %tmp.441 = dup %tmp.435;
+        %tmp.442 = aputv %tmp.441 3 %tmp.440;
+        invoke %tmp.410 %tmp.411(%tmp.413, %tmp.442);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 161 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_163_12_165_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 164 12 ]
+        %tmp.443 = lgetv %numCoords.6;
+        %tmp.444 = getv function %tmp.443 :put;
+        %tmp.446 = lgetv %hourValue.7;
+        %tmp.447 = newa 4;
+        %tmp.448 = lgetv %pointX.2;
+        %tmp.449 = getv function %tmp.448 :toNumber;
+        %tmp.450 = invoke %tmp.448 %tmp.449();
+        %tmp.451 = 3;
+        %tmp.452 = sub %tmp.450 %tmp.451;
+        %tmp.453 = dup %tmp.447;
+        %tmp.454 = aputv %tmp.453 0 %tmp.452;
+        %tmp.455 = lgetv %pointY.3;
+        %tmp.456 = getv function %tmp.455 :toNumber;
+        %tmp.457 = invoke %tmp.455 %tmp.456();
+        %tmp.458 = 5;
+        %tmp.459 = sub %tmp.457 %tmp.458;
+        %tmp.460 = dup %tmp.454;
+        %tmp.461 = aputv %tmp.460 1 %tmp.459;
+        %tmp.462 = lgetv %pointX.2;
+        %tmp.463 = getv function %tmp.462 :toNumber;
+        %tmp.464 = invoke %tmp.462 %tmp.463();
+        %tmp.465 = 8;
+        %tmp.466 = add %tmp.464 %tmp.465;
+        %tmp.467 = dup %tmp.461;
+        %tmp.468 = aputv %tmp.467 2 %tmp.466;
+        %tmp.469 = lgetv %pointY.3;
+        %tmp.470 = getv function %tmp.469 :toNumber;
+        %tmp.471 = invoke %tmp.469 %tmp.470();
+        %tmp.472 = 8;
+        %tmp.473 = sub %tmp.471 %tmp.472;
+        %tmp.474 = dup %tmp.468;
+        %tmp.475 = aputv %tmp.474 3 %tmp.473;
+        invoke %tmp.443 %tmp.444(%tmp.446, %tmp.475);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 165 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_167_12_169_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 168 12 ]
+        %tmp.476 = lgetv %numCoords.6;
+        %tmp.477 = getv function %tmp.476 :put;
+        %tmp.479 = lgetv %hourValue.7;
+        %tmp.480 = newa 2;
+        %tmp.481 = lgetv %pointX.2;
+        %tmp.482 = getv function %tmp.481 :toNumber;
+        %tmp.483 = invoke %tmp.481 %tmp.482();
+        %tmp.484 = dup %tmp.480;
+        %tmp.485 = aputv %tmp.484 0 %tmp.483;
+        %tmp.486 = lgetv %pointY.3;
+        %tmp.487 = getv function %tmp.486 :toNumber;
+        %tmp.488 = invoke %tmp.486 %tmp.487();
+        %tmp.489 = 7;
+        %tmp.490 = sub %tmp.488 %tmp.489;
+        %tmp.491 = dup %tmp.485;
+        %tmp.492 = aputv %tmp.491 1 %tmp.490;
+        invoke %tmp.476 %tmp.477(%tmp.479, %tmp.492);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 169 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_171_12_173_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 172 12 ]
+        %tmp.493 = lgetv %numCoords.6;
+        %tmp.494 = getv function %tmp.493 :put;
+        %tmp.496 = lgetv %hourValue.7;
+        %tmp.497 = newa 2;
+        %tmp.498 = lgetv %pointX.2;
+        %tmp.499 = getv function %tmp.498 :toNumber;
+        %tmp.500 = invoke %tmp.498 %tmp.499();
+        %tmp.501 = 3;
+        %tmp.502 = sub %tmp.500 %tmp.501;
+        %tmp.503 = dup %tmp.497;
+        %tmp.504 = aputv %tmp.503 0 %tmp.502;
+        %tmp.505 = lgetv %pointY.3;
+        %tmp.506 = getv function %tmp.505 :toNumber;
+        %tmp.507 = invoke %tmp.505 %tmp.506();
+        %tmp.508 = 6;
+        %tmp.509 = sub %tmp.507 %tmp.508;
+        %tmp.510 = dup %tmp.504;
+        %tmp.511 = aputv %tmp.510 1 %tmp.509;
+        invoke %tmp.493 %tmp.494(%tmp.496, %tmp.511);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 173 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_175_12_177_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 176 12 ]
+        %tmp.512 = lgetv %numCoords.6;
+        %tmp.513 = getv function %tmp.512 :put;
+        %tmp.515 = lgetv %hourValue.7;
+        %tmp.516 = newa 2;
+        %tmp.517 = lgetv %pointX.2;
+        %tmp.518 = getv function %tmp.517 :toNumber;
+        %tmp.519 = invoke %tmp.517 %tmp.518();
+        %tmp.520 = 4;
+        %tmp.521 = sub %tmp.519 %tmp.520;
+        %tmp.522 = dup %tmp.516;
+        %tmp.523 = aputv %tmp.522 0 %tmp.521;
+        %tmp.524 = lgetv %pointY.3;
+        %tmp.525 = getv function %tmp.524 :toNumber;
+        %tmp.526 = invoke %tmp.524 %tmp.525();
+        %tmp.527 = 7;
+        %tmp.528 = sub %tmp.526 %tmp.527;
+        %tmp.529 = dup %tmp.523;
+        %tmp.530 = aputv %tmp.529 1 %tmp.528;
+        invoke %tmp.512 %tmp.513(%tmp.515, %tmp.530);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 177 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_179_12_181_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 180 12 ]
+        %tmp.531 = lgetv %numCoords.6;
+        %tmp.532 = getv function %tmp.531 :put;
+        %tmp.534 = lgetv %hourValue.7;
+        %tmp.535 = newa 2;
+        %tmp.536 = lgetv %pointX.2;
+        %tmp.537 = getv function %tmp.536 :toNumber;
+        %tmp.538 = invoke %tmp.536 %tmp.537();
+        %tmp.539 = 7;
+        %tmp.540 = sub %tmp.538 %tmp.539;
+        %tmp.541 = dup %tmp.535;
+        %tmp.542 = aputv %tmp.541 0 %tmp.540;
+        %tmp.543 = lgetv %pointY.3;
+        %tmp.544 = getv function %tmp.543 :toNumber;
+        %tmp.545 = invoke %tmp.543 %tmp.544();
+        %tmp.546 = 10;
+        %tmp.547 = sub %tmp.545 %tmp.546;
+        %tmp.548 = dup %tmp.542;
+        %tmp.549 = aputv %tmp.548 1 %tmp.547;
+        invoke %tmp.531 %tmp.532(%tmp.534, %tmp.549);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 181 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_183_12_185_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 184 12 ]
+        %tmp.550 = lgetv %numCoords.6;
+        %tmp.551 = getv function %tmp.550 :put;
+        %tmp.553 = lgetv %hourValue.7;
+        %tmp.554 = newa 4;
+        %tmp.555 = lgetv %pointX.2;
+        %tmp.556 = getv function %tmp.555 :toNumber;
+        %tmp.557 = invoke %tmp.555 %tmp.556();
+        %tmp.558 = 4;
+        %tmp.559 = sub %tmp.557 %tmp.558;
+        %tmp.560 = dup %tmp.554;
+        %tmp.561 = aputv %tmp.560 0 %tmp.559;
+        %tmp.562 = lgetv %pointY.3;
+        %tmp.563 = getv function %tmp.562 :toNumber;
+        %tmp.564 = invoke %tmp.562 %tmp.563();
+        %tmp.565 = 8;
+        %tmp.566 = sub %tmp.564 %tmp.565;
+        %tmp.567 = dup %tmp.561;
+        %tmp.568 = aputv %tmp.567 1 %tmp.566;
+        %tmp.569 = lgetv %pointX.2;
+        %tmp.570 = getv function %tmp.569 :toNumber;
+        %tmp.571 = invoke %tmp.569 %tmp.570();
+        %tmp.572 = 3;
+        %tmp.573 = sub %tmp.571 %tmp.572;
+        %tmp.574 = dup %tmp.568;
+        %tmp.575 = aputv %tmp.574 2 %tmp.573;
+        %tmp.576 = lgetv %pointY.3;
+        %tmp.577 = getv function %tmp.576 :toNumber;
+        %tmp.578 = invoke %tmp.576 %tmp.577();
+        %tmp.579 = 6;
+        %tmp.580 = sub %tmp.578 %tmp.579;
+        %tmp.581 = dup %tmp.575;
+        %tmp.582 = aputv %tmp.581 3 %tmp.580;
+        invoke %tmp.550 %tmp.551(%tmp.553, %tmp.582);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 185 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_187_12_189_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 188 12 ]
+        %tmp.583 = lgetv %numCoords.6;
+        %tmp.584 = getv function %tmp.583 :put;
+        %tmp.586 = lgetv %hourValue.7;
+        %tmp.587 = newa 4;
+        %tmp.588 = lgetv %pointX.2;
+        %tmp.589 = getv function %tmp.588 :toNumber;
+        %tmp.590 = invoke %tmp.588 %tmp.589();
+        %tmp.591 = 6;
+        %tmp.592 = sub %tmp.590 %tmp.591;
+        %tmp.593 = dup %tmp.587;
+        %tmp.594 = aputv %tmp.593 0 %tmp.592;
+        %tmp.595 = lgetv %pointY.3;
+        %tmp.596 = getv function %tmp.595 :toNumber;
+        %tmp.597 = invoke %tmp.595 %tmp.596();
+        %tmp.598 = 15;
+        %tmp.599 = sub %tmp.597 %tmp.598;
+        %tmp.600 = dup %tmp.594;
+        %tmp.601 = aputv %tmp.600 1 %tmp.599;
+        %tmp.602 = lgetv %pointX.2;
+        %tmp.603 = getv function %tmp.602 :toNumber;
+        %tmp.604 = invoke %tmp.602 %tmp.603();
+        %tmp.605 = 3;
+        %tmp.606 = add %tmp.604 %tmp.605;
+        %tmp.607 = dup %tmp.601;
+        %tmp.608 = aputv %tmp.607 2 %tmp.606;
+        %tmp.609 = lgetv %pointY.3;
+        %tmp.610 = getv function %tmp.609 :toNumber;
+        %tmp.611 = invoke %tmp.609 %tmp.610();
+        %tmp.612 = 17;
+        %tmp.613 = sub %tmp.611 %tmp.612;
+        %tmp.614 = dup %tmp.608;
+        %tmp.615 = aputv %tmp.614 3 %tmp.613;
+        invoke %tmp.583 %tmp.584(%tmp.586, %tmp.615);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 189 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_191_12_193_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 192 12 ]
+        %tmp.616 = lgetv %numCoords.6;
+        %tmp.617 = getv function %tmp.616 :put;
+        %tmp.619 = lgetv %hourValue.7;
+        %tmp.620 = newa 4;
+        %tmp.621 = lgetv %pointX.2;
+        %tmp.622 = getv function %tmp.621 :toNumber;
+        %tmp.623 = invoke %tmp.621 %tmp.622();
+        %tmp.624 = 5;
+        %tmp.625 = sub %tmp.623 %tmp.624;
+        %tmp.626 = dup %tmp.620;
+        %tmp.627 = aputv %tmp.626 0 %tmp.625;
+        %tmp.628 = lgetv %pointY.3;
+        %tmp.629 = getv function %tmp.628 :toNumber;
+        %tmp.630 = invoke %tmp.628 %tmp.629();
+        %tmp.631 = 12;
+        %tmp.632 = sub %tmp.630 %tmp.631;
+        %tmp.633 = dup %tmp.627;
+        %tmp.634 = aputv %tmp.633 1 %tmp.632;
+        %tmp.635 = lgetv %pointX.2;
+        %tmp.636 = getv function %tmp.635 :toNumber;
+        %tmp.637 = invoke %tmp.635 %tmp.636();
+        %tmp.638 = 4;
+        %tmp.639 = add %tmp.637 %tmp.638;
+        %tmp.640 = dup %tmp.634;
+        %tmp.641 = aputv %tmp.640 2 %tmp.639;
+        %tmp.642 = lgetv %pointY.3;
+        %tmp.643 = getv function %tmp.642 :toNumber;
+        %tmp.644 = invoke %tmp.642 %tmp.643();
+        %tmp.645 = 17;
+        %tmp.646 = sub %tmp.644 %tmp.645;
+        %tmp.647 = dup %tmp.641;
+        %tmp.648 = aputv %tmp.647 3 %tmp.646;
+        invoke %tmp.616 %tmp.617(%tmp.619, %tmp.648);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 193 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_195_12_197_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 196 12 ]
+        %tmp.649 = lgetv %numCoords.6;
+        %tmp.650 = getv function %tmp.649 :put;
+        %tmp.652 = lgetv %hourValue.7;
+        %tmp.653 = newa 2;
+        %tmp.654 = lgetv %pointX.2;
+        %tmp.655 = getv function %tmp.654 :toNumber;
+        %tmp.656 = invoke %tmp.654 %tmp.655();
+        %tmp.657 = 1;
+        %tmp.658 = sub %tmp.656 %tmp.657;
+        %tmp.659 = dup %tmp.653;
+        %tmp.660 = aputv %tmp.659 0 %tmp.658;
+        %tmp.661 = lgetv %pointY.3;
+        %tmp.662 = getv function %tmp.661 :toNumber;
+        %tmp.663 = invoke %tmp.661 %tmp.662();
+        %tmp.664 = 13;
+        %tmp.665 = sub %tmp.663 %tmp.664;
+        %tmp.666 = dup %tmp.660;
+        %tmp.667 = aputv %tmp.666 1 %tmp.665;
+        invoke %tmp.649 %tmp.650(%tmp.652, %tmp.667);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 197 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_199_12_201_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 200 12 ]
+        %tmp.668 = lgetv %numCoords.6;
+        %tmp.669 = getv function %tmp.668 :put;
+        %tmp.671 = lgetv %hourValue.7;
+        %tmp.672 = newa 2;
+        %tmp.673 = lgetv %pointX.2;
+        %tmp.674 = getv function %tmp.673 :toNumber;
+        %tmp.675 = invoke %tmp.673 %tmp.674();
+        %tmp.676 = 4;
+        %tmp.677 = sub %tmp.675 %tmp.676;
+        %tmp.678 = dup %tmp.672;
+        %tmp.679 = aputv %tmp.678 0 %tmp.677;
+        %tmp.680 = lgetv %pointY.3;
+        %tmp.681 = getv function %tmp.680 :toNumber;
+        %tmp.682 = invoke %tmp.680 %tmp.681();
+        %tmp.683 = 12;
+        %tmp.684 = sub %tmp.682 %tmp.683;
+        %tmp.685 = dup %tmp.679;
+        %tmp.686 = aputv %tmp.685 1 %tmp.684;
+        invoke %tmp.668 %tmp.669(%tmp.671, %tmp.686);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 201 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_203_12_205_17_switchCase:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 204 12 ]
+        %tmp.687 = lgetv %numCoords.6;
+        %tmp.688 = getv function %tmp.687 :put;
+        %tmp.690 = lgetv %hourValue.7;
+        %tmp.691 = newa 2;
+        %tmp.692 = lgetv %pointX.2;
+        %tmp.693 = getv function %tmp.692 :toNumber;
+        %tmp.694 = invoke %tmp.692 %tmp.693();
+        %tmp.695 = 3;
+        %tmp.696 = sub %tmp.694 %tmp.695;
+        %tmp.697 = dup %tmp.691;
+        %tmp.698 = aputv %tmp.697 0 %tmp.696;
+        %tmp.699 = lgetv %pointY.3;
+        %tmp.700 = getv function %tmp.699 :toNumber;
+        %tmp.701 = invoke %tmp.699 %tmp.700();
+        %tmp.702 = 10;
+        %tmp.703 = sub %tmp.701 %tmp.702;
+        %tmp.704 = dup %tmp.698;
+        %tmp.705 = aputv %tmp.704 1 %tmp.703;
+        invoke %tmp.687 %tmp.688(%tmp.690, %tmp.705);
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 205 12 ]
+        goto break @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_defaultCodeBegin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_126_10_206_10_switchStmtEnd:
+        pop;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_51_207_8_stop:
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_8_207_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_120_8_207_8_if_end:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_36_208_6_stop:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_incr:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 119 ]
+        %tmp.706 = lgetv %nr.8;
+        %tmp.707 = 1;
+        %tmp.708 = add %tmp.706 %tmp.707;
+        lputv %nr.8 %tmp.708;
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_test;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_119_4_208_6_for_end:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 210 6 ]
+        %tmp.710 = lgetv %numCoords.6;
+        ret %tmp.710;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_stop:
+    }
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc"; @line = 214; ]
+    function calculateSmallDialLines(halfWidth) {
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 215 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_stop" ]
+        %linesCoords.1 = local;
+        %tmp.1 = newd 0;
+        lputv %linesCoords.1 %tmp.1;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 216 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_stop" ]
+        %angleDeg.2 = local;
+        %tmp.2 = 0;
+        lputv %angleDeg.2 %tmp.2;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 217 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_stop" ]
+        %pointX.3 = local;
+        %tmp.3 = 0;
+        lputv %pointX.3 %tmp.3;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 218 4 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_stop" ]
+        %pointY.4 = local;
+        %tmp.4 = 0;
+        lputv %pointY.4 %tmp.4;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 219 4 ]
+        for @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_test @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_incr @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_init:
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_begin" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_end" ]
+        %angle.5 = local;
+        %tmp.5 = 0;
+        lputv %angle.5 %tmp.5;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_test:
+        %tmp.7 = lgetv %angle.5;
+        %tmp.8 = 360;
+        %tmp.9 = lt %tmp.7 %tmp.8;
+        bf %tmp.9 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_begin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_47_226_4_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 220 6 ]
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_6_225_6_if_stmt:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_10_220_74_begin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_10_220_56_begin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_10_220_38_begin:
+        %tmp.11 = lgetv %angle.5;
+        %tmp.12 = 0;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_6_225_6_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_26_220_38_true:
+        %tmp.15 = lgetv %angle.5;
+        %tmp.16 = 90;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        push %tmp.17;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_26_220_38_end:
+        %tmp.18 = phi [%tmp.13 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_10_220_38_begin] [%tmp.17 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_26_220_38_true] [%tmp.18 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_26_220_38_end];
+        bf %tmp.18 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_6_225_6_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_43_220_56_true:
+        %tmp.20 = lgetv %angle.5;
+        %tmp.21 = 180;
+        %tmp.22 = ne %tmp.20 %tmp.21;
+        push %tmp.22;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_43_220_56_end:
+        %tmp.23 = phi [%tmp.18 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_10_220_56_begin] [%tmp.22 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_43_220_56_true] [%tmp.23 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_43_220_56_end];
+        bf %tmp.23 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_6_225_6_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_61_220_74_true:
+        %tmp.25 = lgetv %angle.5;
+        %tmp.26 = 270;
+        %tmp.27 = ne %tmp.25 %tmp.26;
+        push %tmp.27;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_61_220_74_end:
+        %tmp.28 = phi [%tmp.23 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_10_220_74_begin] [%tmp.27 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_61_220_74_true] [%tmp.28 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_61_220_74_end];
+        bf %tmp.28 @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_6_225_6_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_6_225_6_if_true:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_77_225_6_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 221 8 ]
+        %tmp.30 = lgetv %angle.5;
+        %tmp.31 = getm $.Toybox.Math;
+        %tmp.32 = getv %tmp.31 :PI;
+        %tmp.33 = mul %tmp.30 %tmp.32;
+        %tmp.34 = 180;
+        %tmp.35 = div %tmp.33 %tmp.34;
+        lputv %angleDeg.2 %tmp.35;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 222 8 ]
+        %tmp.37 = lgetv %halfWidth;
+        %tmp.38 = getm $.Toybox.Math;
+        %tmp.39 = getv function %tmp.38 :cos;
+        %tmp.41 = lgetv %angleDeg.2;
+        %tmp.42 = invoke %tmp.38 %tmp.39(%tmp.41);
+        %tmp.43 = mul %tmp.37 %tmp.42;
+        %tmp.45 = lgetv %halfWidth;
+        %tmp.46 = add %tmp.43 %tmp.45;
+        lputv %pointX.3 %tmp.46;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 223 8 ]
+        %tmp.48 = lgetv %halfWidth;
+        %tmp.49 = getm $.Toybox.Math;
+        %tmp.50 = getv function %tmp.49 :sin;
+        %tmp.52 = lgetv %angleDeg.2;
+        %tmp.53 = invoke %tmp.49 %tmp.50(%tmp.52);
+        %tmp.54 = mul %tmp.48 %tmp.53;
+        %tmp.56 = lgetv %halfWidth;
+        %tmp.57 = add %tmp.54 %tmp.56;
+        lputv %pointY.4 %tmp.57;
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 224 8 ]
+        %tmp.58 = lgetv %linesCoords.1;
+        %tmp.59 = getv function %tmp.58 :put;
+        %tmp.61 = lgetv %angle.5;
+        %tmp.62 = newa 2;
+        %tmp.64 = lgetv %pointX.3;
+        %tmp.65 = dup %tmp.62;
+        %tmp.66 = aputv %tmp.65 0 %tmp.64;
+        %tmp.68 = lgetv %pointY.4;
+        %tmp.69 = dup %tmp.66;
+        %tmp.70 = aputv %tmp.69 1 %tmp.68;
+        invoke %tmp.58 %tmp.59(%tmp.61, %tmp.70);
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_77_225_6_stop:
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_6_225_6_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_220_6_225_6_if_end:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_47_226_4_stop:
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_incr:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 219 ]
+        %tmp.71 = lgetv %angle.5;
+        %tmp.72 = 15;
+        %tmp.73 = add %tmp.71 %tmp.72;
+        lputv %angle.5 %tmp.73;
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_test;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_219_4_226_4_for_end:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 228 4 ]
+        %tmp.75 = lgetv %linesCoords.1;
+        ret %tmp.75;
+_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_214_46_229_2_stop:
+    }
+}
+[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc"; @line = 1; ]
+<init> {
+}
