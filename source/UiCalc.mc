@@ -7,7 +7,7 @@ class UiCalc {
     var angleDeg = 0;
     var pointX = 0;
     var pointY = 0;
-    var hoursCircle = halfWidth - 15;
+    var hoursCircle = halfWidth - 25;
     var angleToNrCorrection = -6;
     var numCoords = {};
     var hourValue = null;
@@ -111,7 +111,7 @@ class UiCalc {
     var angleDeg = 0;
     var pointX = 0;
     var pointY = 0;
-    var hoursCircle = halfWidth - 15;
+    var hoursCircle = halfWidth - 25;
     var angleToNrCorrection = -6;
     var numCoords = {};
     var hourValue = null;

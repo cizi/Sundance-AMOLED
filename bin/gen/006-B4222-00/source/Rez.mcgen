@@ -58,9 +58,9 @@ module Rez {
 
     module Layouts {
         function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_custom_drawable_19972706068331577316 = new Background();
+            var rez_cmp_local_custom_drawable_12367412671737983967 = new Background();
 
-            return [rez_cmp_local_custom_drawable_19972706068331577316] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_12367412671737983967] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 
@@ -70,7 +70,6 @@ module Rez {
         (:initialized) var HR as ResourceId;
         (:initialized) var UtcPlus65 as ResourceId;
         (:initialized) var ColorRed as ResourceId;
-        (:initialized) var NightModeTitle as ResourceId;
         (:initialized) var UtcPlus1 as ResourceId;
         (:initialized) var ShowAlarmIndicatorTitle as ResourceId;
         (:initialized) var UtcPlus2 as ResourceId;
@@ -80,7 +79,6 @@ module Rez {
         (:initialized) var BlueHourColorTitle as ResourceId;
         (:initialized) var UtcPlus6 as ResourceId;
         (:initialized) var UtcPlus7 as ResourceId;
-        (:initialized) var NightModeThemeColorTitle as ResourceId;
         (:initialized) var UtcPlus8 as ResourceId;
         (:initialized) var UtcPlus9 as ResourceId;
         (:initialized) var Distance as ResourceId;
@@ -133,6 +131,7 @@ module Rez {
         (:initialized) var ColorDarkYellow as ResourceId;
         (:initialized) var SecondTimeOnDialColorTitle as ResourceId;
         (:initialized) var ColorBlack as ResourceId;
+        (:initialized) var HideMasterDialNrTitle as ResourceId;
         (:initialized) var width20 as ResourceId;
         (:initialized) var DateFormatTitle as ResourceId;
         (:initialized) var LikeASuunto as ResourceId;
@@ -197,7 +196,6 @@ module Rez {
         (:initialized) var Weather as ResourceId;
         (:initialized) var SmallHoursIndicatorSizeTitle as ResourceId;
         (:initialized) var ShowSecondsTitle as ResourceId;
-        (:initialized) var NightModeThemeTitle as ResourceId;
         (:initialized) var Opt3Title as ResourceId;
         (:initialized) var SunsetSunrise as ResourceId;
         (:initialized) var ColorLightGreen as ResourceId;

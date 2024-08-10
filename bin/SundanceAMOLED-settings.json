@@ -102,105 +102,6 @@
     "configMax" : null,
     "configMaxLength" : null
   }, {
-    "key" : "NightMode",
-    "valueType" : "boolean",
-    "defaultValue" : false,
-    "configTitle" : "NightModeTitle",
-    "configPrompt" : null,
-    "configType" : "boolean",
-    "configError" : null,
-    "configHelpUrl" : null,
-    "configReadonly" : false,
-    "configRequired" : false,
-    "configOptions" : null,
-    "configMin" : null,
-    "configMax" : null,
-    "configMaxLength" : null
-  }, {
-    "key" : "NightModeTheme",
-    "valueType" : "boolean",
-    "defaultValue" : false,
-    "configTitle" : "NightModeThemeTitle",
-    "configPrompt" : null,
-    "configType" : "boolean",
-    "configError" : null,
-    "configHelpUrl" : null,
-    "configReadonly" : false,
-    "configRequired" : false,
-    "configOptions" : null,
-    "configMin" : null,
-    "configMax" : null,
-    "configMaxLength" : null
-  }, {
-    "key" : "NightModeThemeColor",
-    "valueType" : "number",
-    "defaultValue" : 16733440,
-    "configTitle" : "NightModeThemeColorTitle",
-    "configPrompt" : null,
-    "configType" : "list",
-    "configError" : null,
-    "configHelpUrl" : null,
-    "configReadonly" : false,
-    "configRequired" : false,
-    "configOptions" : [ {
-      "display" : "ColorWhite",
-      "value" : 16777215
-    }, {
-      "display" : "ColorBlack",
-      "value" : 0
-    }, {
-      "display" : "ColorDarkBlue",
-      "value" : 255
-    }, {
-      "display" : "ColorBlue",
-      "value" : 43775
-    }, {
-      "display" : "ColorLightBlue",
-      "value" : 22015
-    }, {
-      "display" : "ColorRed",
-      "value" : 16711680
-    }, {
-      "display" : "ColorLightRed",
-      "value" : 16711765
-    }, {
-      "display" : "ColorDarkYellow",
-      "value" : 16776960
-    }, {
-      "display" : "ColorYellow",
-      "value" : 16777045
-    }, {
-      "display" : "ColorLightYellow",
-      "value" : 16777130
-    }, {
-      "display" : "ColorLightGrey",
-      "value" : 11184810
-    }, {
-      "display" : "ColorDarkGrey",
-      "value" : 5592405
-    }, {
-      "display" : "ColorOrange",
-      "value" : 16733440
-    }, {
-      "display" : "ColorLightOrange",
-      "value" : 16733525
-    }, {
-      "display" : "ColorDarkGreen",
-      "value" : 43520
-    }, {
-      "display" : "ColorGreen",
-      "value" : 65280
-    }, {
-      "display" : "ColorLightGreen",
-      "value" : 65450
-    }, {
-      "display" : "ColorPink",
-      "value" : 16711935
-    } ],
-    "configMin" : null,
-    "configMax" : null,
-    "configMaxLength" : null
-  }, {
     "key" : "Opt1",
     "valueType" : "number",
     "defaultValue" : 1,
@@ -921,6 +822,21 @@
     "configMax" : null,
     "configMaxLength" : null
   }, {
+    "key" : "HideMasterDialNr",
+    "valueType" : "boolean",
+    "defaultValue" : false,
+    "configTitle" : "HideMasterDialNrTitle",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
     "key" : "AlarmIndicator",
     "valueType" : "boolean",
     "defaultValue" : true,
@@ -1316,7 +1232,6 @@
       "HR" : "HR",
       "UtcPlus65" : "+06.30",
       "ColorRed" : "Red",
-      "NightModeTitle" : "Night mode (better readability after sunset)",
       "UtcPlus1" : "+01.00",
       "ShowAlarmIndicatorTitle" : "Show alarm indicator",
       "UtcPlus2" : "+02.00",
@@ -1326,7 +1241,6 @@
       "BlueHourColorTitle" : "Blue hours color",
       "UtcPlus6" : "+06.00",
       "UtcPlus7" : "+07.00",
-      "NightModeThemeColorTitle" : "Night mode theme color",
       "UtcPlus8" : "+08.00",
       "UtcPlus9" : "+09.00",
       "Distance" : "Today's distance (km)",
@@ -1379,6 +1293,7 @@
       "ColorDarkYellow" : "Dark Yellow",
       "SecondTimeOnDialColorTitle" : "Second time pointer color on dial",
       "ColorBlack" : "Black",
+      "HideMasterDialNrTitle" : "Hide master dial numbers (6, 12, 18, 24)",
       "width20" : "20",
       "DateFormatTitle" : "Date Format",
       "LikeASuunto" : "Suunto like pointer",
@@ -1443,7 +1358,6 @@
       "Weather" : "Weather forecast",
       "SmallHoursIndicatorSizeTitle" : "Small hour indicators size",
       "ShowSecondsTitle" : "Show seconds (causes more battery drain)",
-      "NightModeThemeTitle" : "Use different theme color during nigh mode",
       "Opt3Title" : "Field 3",
       "SunsetSunrise" : "Sunset / Sunrise",
       "ColorLightGreen" : "Light Green",

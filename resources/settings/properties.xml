@@ -26,16 +26,13 @@
     <property id="ShowNotification" type="boolean">true</property>
     <property id="ShowConnection" type="boolean">true</property>
     <property id="UseMilitaryFormat" type="boolean">false</property>
+    <property id="HideMasterDialNr" type="boolean">false</property>
 
     <property id="BlueHourColor" type="number">0x0000FF</property>
     <property id="GoldenHourColor" type="number">0xFF5500</property>
     
     <property id="ShowSeconds" type="boolean">false</property>
-    <property id="NightMode" type="boolean">false</property>    
-    
-    <property id="NightModeTheme" type="boolean">false</property> 
-    <property id="NightModeThemeColor" type="number">0xFF5500</property>    
-    
+
     <property id="CurrentTimePointerType" type="number">1</property> 
     
     <property id="ShowSecondTimeOnDial" type="boolean">false</property>

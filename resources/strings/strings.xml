@@ -92,6 +92,7 @@
     <string id="ShowNotificationTitle">Show notification indicator</string>
     <string id="Weather">Weather forecast</string>
     <string id="OptionDisabled">Disabled</string>
+    <string id="HideMasterDialNrTitle">Hide master dial numbers (6, 12, 18, 24)</string>
 
     <string id="SmallHoursIndicatorSizeTitle">Small hour indicators size</string>
     <string id="ShowGoldenBlueHoursTitle">Show 'Golden' and 'Blue' hours on dial</string>
@@ -100,11 +101,7 @@
     <string id="BlueHourColorTitle">Blue hours color</string>
     
     <string id="ShowSecondsTitle">Show seconds (causes more battery drain)</string>
-    <string id="NightModeTitle">Night mode (better readability after sunset)</string>
-    
-    <string id="NightModeThemeTitle">Use different theme color during nigh mode</string>
-    <string id="NightModeThemeColorTitle">Night mode theme color</string>  
-    
+
     <string id="ShowSecondTimeOnDialTitle">Show second time pointer on dial</string>  
     <string id="SecondTimeOnDialColorTitle">Second time pointer color on dial</string> 
     <string id="SecondTimePointerTypeTitle">Second time pointer type (if enabled on dial)</string>   

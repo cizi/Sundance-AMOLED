@@ -31,7 +31,7 @@ _Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start:
         [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_6_45_107_2_stop" ]
         %hoursCircle.4 = local;
         %tmp.5 = lgetv %halfWidth;
-        %tmp.6 = 15;
+        %tmp.6 = 25;
         %tmp.7 = sub %tmp.5 %tmp.6;
         lputv %hoursCircle.4 %tmp.7;
 [ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 11 4 ]
@@ -913,7 +913,7 @@ _Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start:
         [ "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_UiCalc_mc_110_60_211_2_stop" ]
         %hoursCircle.4 = local;
         %tmp.5 = lgetv %halfWidth;
-        %tmp.6 = 15;
+        %tmp.6 = 25;
         %tmp.7 = sub %tmp.5 %tmp.6;
         lputv %hoursCircle.4 %tmp.7;
 [ "/Users/cizi/Garmin/Sundance-AMOLED/source/UiCalc.mc" 115 4 ]
