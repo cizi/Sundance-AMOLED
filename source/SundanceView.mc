@@ -627,7 +627,7 @@ class SundanceView extends WatchUi.WatchFace {
         var goldenPm = null;
 
         location = activityInfo.currentLocation;
-        if (location) {
+        if (location != null) {
             location = activityInfo.currentLocation.toRadians();
             app.Storage.setValue("location", location);
         } else {
