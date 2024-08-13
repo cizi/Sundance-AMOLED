@@ -1,2 +1,4 @@
+Version 0.3 and 0.2
+- fixing location
 Version 0.1
 - based on classic Sundace watchaface

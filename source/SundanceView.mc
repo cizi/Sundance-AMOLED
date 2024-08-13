@@ -629,9 +629,16 @@ class SundanceView extends WatchUi.WatchFace {
         location = activityInfo.currentLocation;
         if (location != null) {
             location = activityInfo.currentLocation.toRadians();
-            app.Storage.setValue("location", location);
+            // app.Storage.setValue("location", location);
+            app.Storage.setValue("locationLat", location[0]);
+            app.Storage.setValue("locationLong", location[1]);
         } else {
-            location = app.Storage.getValue("location");
+            var locationLat = app.Storage.getValue("locationLat");
+            var locationLong = app.Storage.getValue("locationLong");
+            if (locationLat != null && locationLong != null) {
+                location = [locationLat, locationLong];
+            } 
+            // location = app.Storage.getValue("location");
         }
 
          if (location != null) {
