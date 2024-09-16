@@ -285,11 +285,11 @@ class SundanceView extends WatchUi.WatchFace {
                 today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
                 var dateWidth = dc.getTextWidthInPixels(dateString, Gfx.FONT_TINY);
                 moonCentering = 14;
-                var moonY = is390dev ? 125 : 130;
+                var moonY = is390dev ? 120 : 130;
                 drawMoonPhase(halfWidth - (dateWidth / 2) - 6, moonY, dc, getMoonPhase(today), 0);
             }
             dc.setColor(frColor, Gfx.COLOR_TRANSPARENT);
-            var dateY = is390dev ? 110 : 115;
+            var dateY = is390dev ? 107 : 115;
             dc.drawText(halfWidth + moonCentering, dateY, Gfx.FONT_TINY, dateString, Gfx.TEXT_JUSTIFY_CENTER);
         }
         
@@ -347,7 +347,7 @@ class SundanceView extends WatchUi.WatchFace {
         // TIME
         dc.setColor(frColor, Gfx.COLOR_TRANSPARENT);
         var timeString = getFormattedTime(today.hour, today.min);
-        dc.drawText(46, halfWidth - (dc.getFontHeight(Gfx.FONT_SYSTEM_NUMBER_HOT) / 2) + 2, fntDataFields, timeString[:amPmFull], Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(75, halfWidth - (dc.getFontHeight(Gfx.FONT_SYSTEM_NUMBER_HOT) / 2) + 2, fntDataFields, timeString[:amPmFull], Gfx.TEXT_JUSTIFY_CENTER);
         dc.drawText(halfWidth, halfWidth - (Gfx.getFontHeight(Gfx.FONT_SYSTEM_NUMBER_HOT) / 2), Gfx.FONT_SYSTEM_NUMBER_HOT, timeString[:formatted], Gfx.TEXT_JUSTIFY_CENTER);
 
         // CURRENT TIME POINTER
@@ -1764,7 +1764,7 @@ class SundanceView extends WatchUi.WatchFace {
                 if (settings.temperatureUnits == System.UNIT_STATUTE) {
                     weatherTemp = ((weatherCond.temperature * (9.0 / 5)) + 32).format("%02d") + "  F"; 
                 } else {
-                    weatherTemp = weatherCond.temperature.format("%02d") + "  C";
+                    weatherTemp = weatherCond.temperature.format("%01d") + "  C";
                 }
             } 
         }
