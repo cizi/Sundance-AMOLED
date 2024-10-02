@@ -14,10 +14,6 @@ using Toybox.Weather;
 var do1hz = false;
 
 class SundanceView extends WatchUi.WatchFace {
-    // low power mode
-    var canDo1hz = false;
-	// var inLowPower = true;
-
     const PRESSURE_ARRAY_KEY = "pressure";
 
     // others
@@ -218,14 +214,6 @@ class SundanceView extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
-        if (dc has :clearClip) {    // Clear any partial update clipping.
-            dc.clearClip();
-        }
-
-        // see if 1hz is possible and wanted
-        do1hz = (Toybox.WatchUi.WatchFace has :onPartialUpdate) && app.getProperty("ShowSeconds");
-        canDo1hz = do1hz;
-
         // base objects reload
         activityInfo = Activity.getActivityInfo();
 
@@ -352,13 +340,6 @@ class SundanceView extends WatchUi.WatchFace {
 
         // CURRENT TIME POINTER
         drawTimePointerInDial(today, app.getProperty("CurrentTimePointerType"), app.getProperty("CurrentTimePointer"), dc);
-    }
-
-
-    function onPartialUpdate(dc) {
-        if (canDo1hz) {
-            doSeconds(secPosX, secPosY, dc, System.getClockTime(), true);
-        }
     }
 
 
@@ -888,8 +869,8 @@ class SundanceView extends WatchUi.WatchFace {
             }
         }
 
-        if (canDo1hz) {
-            doSeconds(secPosX, secPosY, dc, today, false);
+        if (app.getProperty("ShowSeconds")) {
+            doSeconds(secPosX, secPosY, dc, today);
         } else {
             if (!useBezelAsDial) {
                 if (!app.getProperty("HideMasterDialNr")) {
@@ -903,13 +884,7 @@ class SundanceView extends WatchUi.WatchFace {
         }
     }
 
-    function doSeconds(secPosX, secPosY, dc, today, isPartial) {
-        if (isPartial) {
-            dc.setClip(secPosX - secFontWidth - 12, secPosY - 2, secFontWidth, secFontHeight);
-            dc.setColor(frColor, bgColor);
-            dc.clear();
-        }
-
+    function doSeconds(secPosX, secPosY, dc, today) {
         dc.drawText(secPosX - 12, secPosY, Gfx.FONT_TINY, today.sec.format("%02d"), Gfx.TEXT_JUSTIFY_RIGHT); // seconds
     }
 
