@@ -1,53 +1,53 @@
 [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 4; ]
 enum {
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 5; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 5; @position = 4; @symbol_enumdec = [ASTRO_DAWN,5,4,14]; ]
     ASTRO_DAWN,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 6; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 6; @position = 4; @symbol_enumdec = [NAUTIC_DAWN,6,4,15]; ]
     NAUTIC_DAWN,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 7; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 7; @position = 4; @symbol_enumdec = [DAWN,7,4,8]; ]
     DAWN,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 8; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 8; @position = 4; @symbol_enumdec = [BLUE_HOUR_AM,8,4,16]; ]
     BLUE_HOUR_AM,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 9; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 9; @position = 4; @symbol_enumdec = [SUNRISE,9,4,11]; ]
     SUNRISE,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 10; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 10; @position = 4; @symbol_enumdec = [SUNRISE_END,10,4,15]; ]
     SUNRISE_END,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 11; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 11; @position = 4; @symbol_enumdec = [GOLDEN_HOUR_AM,11,4,18]; ]
     GOLDEN_HOUR_AM,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 12; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 12; @position = 4; @symbol_enumdec = [NOON,12,4,8]; ]
     NOON,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 13; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 13; @position = 4; @symbol_enumdec = [GOLDEN_HOUR_PM,13,4,18]; ]
     GOLDEN_HOUR_PM,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 14; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 14; @position = 4; @symbol_enumdec = [SUNSET_START,14,4,16]; ]
     SUNSET_START,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 15; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 15; @position = 4; @symbol_enumdec = [SUNSET,15,4,10]; ]
     SUNSET,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 16; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 16; @position = 4; @symbol_enumdec = [BLUE_HOUR_PM,16,4,16]; ]
     BLUE_HOUR_PM,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 17; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 17; @position = 4; @symbol_enumdec = [DUSK,17,4,8]; ]
     DUSK,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 18; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 18; @position = 4; @symbol_enumdec = [NAUTIC_DUSK,18,4,15]; ]
     NAUTIC_DUSK,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 19; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 19; @position = 4; @symbol_enumdec = [ASTRO_DUSK,19,4,14]; ]
     ASTRO_DUSK,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 20; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 20; @position = 4; @symbol_enumdec = [NUM_RESULTS,20,4,15]; ]
     NUM_RESULTS
 }
 [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 23; ]
 enum {
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 24; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 24; @position = 4; @symbol_enumdec = [D_TITLE,24,4,11]; ]
     D_TITLE,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 25; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 25; @position = 4; @symbol_enumdec = [D_FROM,25,4,10]; ]
     D_FROM,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 26; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 26; @position = 4; @symbol_enumdec = [D_TO,26,4,8]; ]
     D_TO,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 27; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 27; @position = 4; @symbol_enumdec = [D_MENU,27,4,10]; ]
     D_MENU,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 28; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 28; @position = 4; @symbol_enumdec = [D_AMPM,28,4,10]; ]
     D_AMPM,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 29; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 29; @position = 4; @symbol_enumdec = [D_PROP,29,4,10]; ]
     D_PROP,
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 30; @position = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 30; @position = 4; @symbol_enumdec = [D_SHOW,30,4,10]; ]
     D_SHOW
 }
 [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SunCalcEnum.mc"; @line = 4; ]

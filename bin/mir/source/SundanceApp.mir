@@ -1,204 +1,244 @@
-[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 1; ]
+[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; ]
 using Toybox.Application;
-[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 2; ]
+[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Application,2,13,24]; @symbol_usingdef<2> = [Storage,2,25,32]; ]
+using Toybox.Application.Storage;
+[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; ]
 using Toybox.WatchUi;
-[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 4; ]
-class SundanceApp extends Application.AppBase{
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 4; ]
+[ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 5; @symbol_classdef = [SundanceApp,5,6,17]; @symbol_extends<0> = [Application,5,26,37]; @symbol_extends<1> = [AppBase,5,38,45]; ]
+class SundanceApp extends Application.AppBase {
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 5; ]
     <init> {
     }
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 4; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 5; ]
     static
     <init> {
     }
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 6; @position = 8; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 7; @position = 8; @symbol_vardef = [weatherForecast,7,8,23]; ]
     var weatherForecast = null;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 9; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 10; @position = 10; @symbol_constdef = [MOON_PHASE,10,10,20]; ]
     const MOON_PHASE = 0;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 10; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 11; @position = 10; @symbol_constdef = [SUNSET_SUNSRISE,11,10,25]; ]
     const SUNSET_SUNSRISE = 1;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 11; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 12; @position = 10; @symbol_constdef = [FLOORS,12,10,16]; ]
     const FLOORS = 2;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 12; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 13; @position = 10; @symbol_constdef = [CALORIES,13,10,18]; ]
     const CALORIES = 3;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 13; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 14; @position = 10; @symbol_constdef = [STEPS,14,10,15]; ]
     const STEPS = 4;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 14; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 15; @position = 10; @symbol_constdef = [HR,15,10,12]; ]
     const HR = 5;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 15; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 16; @position = 10; @symbol_constdef = [BATTERY,16,10,17]; ]
     const BATTERY = 6;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 16; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 17; @position = 10; @symbol_constdef = [ALTITUDE,17,10,18]; ]
     const ALTITUDE = 7;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 17; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 18; @position = 10; @symbol_constdef = [PRESSURE,18,10,18]; ]
     const PRESSURE = 8;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 18; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 19; @position = 10; @symbol_constdef = [NEXT_SUN_EVENT,19,10,24]; ]
     const NEXT_SUN_EVENT = 9;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 19; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 20; @position = 10; @symbol_constdef = [SECOND_TIME,20,10,21]; ]
     const SECOND_TIME = 10;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 20; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 21; @position = 10; @symbol_constdef = [WEATHER,21,10,17]; ]
     const WEATHER = 14;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 21; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 22; @position = 10; @symbol_constdef = [DISABLED,22,10,18]; ]
     const DISABLED = 100;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 22; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 23; @position = 10; @symbol_constdef = [DISTANCE,23,10,18]; ]
     const DISTANCE = 11;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 23; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 24; @position = 10; @symbol_constdef = [BATTERY_IN_DAYS,24,10,25]; ]
     const BATTERY_IN_DAYS = 12;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 24; @position = 10; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 25; @position = 10; @symbol_constdef = [CALORIES_ACTIVE,25,10,25]; ]
     const CALORIES_ACTIVE = 15;
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 26; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 27; @symbol_functiondef = [initialize,27,13,23]; ]
     function initialize() as Void {
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_26_26_28_4_start:
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 27 8 ]
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_27_26_29_4_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 28 8 ]
+        symbol [ AppBase %tmp.2 28 8 15 ];
         %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 28 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_26_26_28_4_stop:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_27_26_29_4_stop:
     }
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 31; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 32; @symbol_functiondef = [onStart,32,13,20]; @symbol_param<0> = [state,32,21,26]; ]
     function onStart(state) {
     }
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 35; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 36; @symbol_functiondef = [onStop,36,13,19]; @symbol_param<0> = [state,36,20,25]; ]
     function onStop(state) {
     }
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 39; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 40; @symbol_functiondef = [getInitialView,40,13,27]; ]
     function getInitialView() {
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_39_30_41_4_start:
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 40 8 ]
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_40_30_42_4_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 41 8 ]
         %tmp.1 = newa 1;
+        symbol [ SundanceView %tmp.5 41 21 33 ];
         %tmp.5 = getv ? :SundanceView;
         %tmp.2 = newc %tmp.5 ();
         %tmp.6 = dup %tmp.1;
         %tmp.7 = aputv %tmp.6 0 %tmp.2;
         ret %tmp.7;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_39_30_41_4_stop:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_40_30_42_4_stop:
     }
-    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 44; ]
+    [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 45; @symbol_functiondef = [onSettingsChanged,45,13,30]; ]
     function onSettingsChanged() {
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_44_33_62_4_start:
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 45 8 ]
-        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_44_33_62_4_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_44_33_62_4_stop" ]
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_45_33_63_4_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 46 8 ]
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_45_33_63_4_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_45_33_63_4_stop" ]
         %uc.1 = local;
+        symbol [ uc %uc.1 46 12 14 ];
+        symbol [ UiCalc %tmp.4 46 21 27 ];
         %tmp.4 = getv ? :UiCalc;
         %tmp.1 = newc %tmp.4 ();
         lputv %uc.1 %tmp.1;
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 46 8 ]
-        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_44_33_62_4_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_44_33_62_4_stop" ]
-        %halfWidth.2 = local;
-        %tmp.5 = getm $.Toybox.Application;
-        %tmp.6 = getv function %tmp.5 :getApp;
-        %tmp.7 = invoke %tmp.5 %tmp.6();
-        %tmp.8 = getv %tmp.7 :Storage;
-        %tmp.9 = getv function %tmp.8 :getValue;
-        %tmp.10 = "halfWidth";
-        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
-        lputv %halfWidth.2 %tmp.11;
+        symbol [ uc %uc.1 46 12 14 ];
 [ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 47 8 ]
-        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_44_33_62_4_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_44_33_62_4_stop" ]
-        %app.3 = local;
-        %tmp.12 = getm $.Toybox.Application;
-        %tmp.13 = getv function %tmp.12 :getApp;
-        %tmp.14 = invoke %tmp.12 %tmp.13();
-        lputv %app.3 %tmp.14;
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_45_33_63_4_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_45_33_63_4_stop" ]
+        %halfWidth.2 = local;
+        symbol [ halfWidth %halfWidth.2 47 12 21 ];
+        symbol [ Storage %tmp.5 47 24 31 ];
+        %tmp.5 = getm $.Toybox.Application.Storage;
+        symbol [ getValue %tmp.6 47 32 40 ];
+        %tmp.6 = getv function %tmp.5 :getValue;
+        %tmp.7 = "halfWidth";
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        lputv %halfWidth.2 %tmp.8;
+        symbol [ halfWidth %halfWidth.2 47 12 21 ];
 [ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 48 8 ]
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_48_8_52_8_if_stmt:
-        %tmp.15 = lgetv %app.3;
-        %tmp.16 = getv function %tmp.15 :getProperty;
-        %tmp.17 = "UseWatchBezel";
-        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
-        bf %tmp.18 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_48_8_52_8_if_false;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_48_8_52_8_if_true:
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_48_46_50_8_start:
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 49 12 ]
-        %tmp.19 = lgetv %app.3;
-        %tmp.20 = getv %tmp.19 :Storage;
-        %tmp.21 = getv function %tmp.20 :setValue;
-        %tmp.22 = "smallDialCoordsNums";
-        %tmp.23 = lgetv %uc.1;
-        %tmp.24 = getv function %tmp.23 :calculateSmallDialNumsForBuildInBezel;
-        %tmp.26 = lgetv %halfWidth.2;
-        %tmp.27 = invoke %tmp.23 %tmp.24(%tmp.26);
-        invoke %tmp.20 %tmp.21(%tmp.22, %tmp.27);
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_48_46_50_8_stop:
-        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_48_8_52_8_if_end;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_48_8_52_8_if_false:
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_50_15_52_8_start:
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 51 12 ]
-        %tmp.28 = lgetv %app.3;
-        %tmp.29 = getv %tmp.28 :Storage;
-        %tmp.30 = getv function %tmp.29 :setValue;
-        %tmp.31 = "smallDialCoordsNums";
-        %tmp.32 = lgetv %uc.1;
-        %tmp.33 = getv function %tmp.32 :calculateSmallDialNums;
-        %tmp.35 = lgetv %halfWidth.2;
-        %tmp.36 = invoke %tmp.32 %tmp.33(%tmp.35);
-        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.36);
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_50_15_52_8_stop:
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_48_8_52_8_if_end:
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 55 8 ]
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_8_59_8_if_stmt:
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_12_55_167_begin:
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_12_55_127_begin:
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_12_55_87_begin:
+        [ "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_45_33_63_4_start" "_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_45_33_63_4_stop" ]
+        %app.3 = local;
+        symbol [ app %app.3 48 12 15 ];
+        symbol [ Application %tmp.9 48 18 29 ];
+        %tmp.9 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.10 48 30 36 ];
+        %tmp.10 = getv function %tmp.9 :getApp;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %app.3 %tmp.11;
+        symbol [ app %app.3 48 12 15 ];
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 49 8 ]
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_49_8_53_8_if_stmt:
+        %tmp.12 = lgetv %app.3;
+        symbol [ app %tmp.12 49 12 15 ];
+        symbol [ getProperty %tmp.13 49 16 27 ];
+        %tmp.13 = getv function %tmp.12 :getProperty;
+        %tmp.14 = "UseWatchBezel";
+        %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+        bf %tmp.15 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_49_8_53_8_if_else_false;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_49_8_53_8_if_true:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_49_46_51_8_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 50 12 ]
+        symbol [ Storage %tmp.16 50 12 19 ];
+        %tmp.16 = getm $.Toybox.Application.Storage;
+        symbol [ setValue %tmp.17 50 20 28 ];
+        %tmp.17 = getv function %tmp.16 :setValue;
+        %tmp.18 = "smallDialCoordsNums";
+        %tmp.19 = lgetv %uc.1;
+        symbol [ uc %tmp.19 50 52 54 ];
+        symbol [ calculateSmallDialNumsForBuildInBezel %tmp.20 50 55 92 ];
+        %tmp.20 = getv function %tmp.19 :calculateSmallDialNumsForBuildInBezel;
+        %tmp.21 = lgetv %halfWidth.2;
+        symbol [ halfWidth %tmp.21 50 93 102 ];
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        invoke %tmp.16 %tmp.17(%tmp.18, %tmp.22);
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_49_46_51_8_stop:
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_49_8_53_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_49_8_53_8_if_else_false:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_51_15_53_8_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 52 12 ]
+        symbol [ Storage %tmp.23 52 12 19 ];
+        %tmp.23 = getm $.Toybox.Application.Storage;
+        symbol [ setValue %tmp.24 52 20 28 ];
+        %tmp.24 = getv function %tmp.23 :setValue;
+        %tmp.25 = "smallDialCoordsNums";
+        %tmp.26 = lgetv %uc.1;
+        symbol [ uc %tmp.26 52 52 54 ];
+        symbol [ calculateSmallDialNums %tmp.27 52 55 77 ];
+        %tmp.27 = getv function %tmp.26 :calculateSmallDialNums;
+        %tmp.28 = lgetv %halfWidth.2;
+        symbol [ halfWidth %tmp.28 52 78 87 ];
+        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
+        invoke %tmp.23 %tmp.24(%tmp.25, %tmp.29);
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_51_15_53_8_stop:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_49_8_53_8_if_end:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 56 8 ]
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_8_60_8_if_stmt:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_12_56_167_begin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_12_56_127_begin:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_12_56_87_begin:
+        %tmp.30 = lgetv %app.3;
+        symbol [ app %tmp.30 56 13 16 ];
+        symbol [ getProperty %tmp.31 56 17 28 ];
+        %tmp.31 = getv function %tmp.30 :getProperty;
+        %tmp.32 = "Opt1";
+        %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
+        symbol [ WEATHER %tmp.35 56 40 47 ];
+        %tmp.35 = getv ? :WEATHER;
+        %tmp.36 = eq %tmp.33 %tmp.35;
+        bt %tmp.36 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_8_60_8_if_true;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_52_56_87_false:
         %tmp.37 = lgetv %app.3;
+        symbol [ app %tmp.37 56 53 56 ];
+        symbol [ getProperty %tmp.38 56 57 68 ];
         %tmp.38 = getv function %tmp.37 :getProperty;
-        %tmp.39 = "Opt1";
+        %tmp.39 = "Opt2";
         %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        symbol [ WEATHER %tmp.42 56 80 87 ];
         %tmp.42 = getv ? :WEATHER;
         %tmp.43 = eq %tmp.40 %tmp.42;
-        bt %tmp.43 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_8_59_8_if_true;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_52_55_87_false:
-        %tmp.44 = lgetv %app.3;
-        %tmp.45 = getv function %tmp.44 :getProperty;
-        %tmp.46 = "Opt2";
-        %tmp.47 = invoke %tmp.44 %tmp.45(%tmp.46);
-        %tmp.49 = getv ? :WEATHER;
-        %tmp.50 = eq %tmp.47 %tmp.49;
-        push %tmp.50;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_52_55_87_end:
-        %tmp.51 = phi [%tmp.43 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_12_55_87_begin] [%tmp.50 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_52_55_87_false] [%tmp.51 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_52_55_87_end];
-        bt %tmp.51 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_8_59_8_if_true;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_92_55_127_false:
-        %tmp.52 = lgetv %app.3;
-        %tmp.53 = getv function %tmp.52 :getProperty;
-        %tmp.54 = "Opt3";
-        %tmp.55 = invoke %tmp.52 %tmp.53(%tmp.54);
-        %tmp.57 = getv ? :WEATHER;
-        %tmp.58 = eq %tmp.55 %tmp.57;
-        push %tmp.58;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_92_55_127_end:
-        %tmp.59 = phi [%tmp.51 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_12_55_127_begin] [%tmp.58 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_92_55_127_false] [%tmp.59 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_92_55_127_end];
-        bt %tmp.59 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_8_59_8_if_true;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_132_55_167_false:
-        %tmp.60 = lgetv %app.3;
-        %tmp.61 = getv function %tmp.60 :getProperty;
-        %tmp.62 = "Opt4";
-        %tmp.63 = invoke %tmp.60 %tmp.61(%tmp.62);
-        %tmp.65 = getv ? :WEATHER;
-        %tmp.66 = eq %tmp.63 %tmp.65;
-        push %tmp.66;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_132_55_167_end:
-        %tmp.67 = phi [%tmp.59 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_12_55_167_begin] [%tmp.66 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_132_55_167_false] [%tmp.67 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_132_55_167_end];
-        bf %tmp.67 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_8_59_8_if_false;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_8_59_8_if_true:
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_170_57_8_start:
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 56 12 ]
-        %tmp.71 = getv ? :WeatherForecast;
-        %tmp.68 = newc %tmp.71 ();
-        putv self :weatherForecast %tmp.68;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_170_57_8_stop:
-        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_8_59_8_if_end;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_8_59_8_if_false:
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_57_15_59_8_start:
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 58 12 ]
-        %tmp.72 = null;
-        putv self :weatherForecast %tmp.72;
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_57_15_59_8_stop:
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_55_8_59_8_if_end:
-[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 61 8 ]
-        %tmp.73 = getm $.Toybox.WatchUi;
-        %tmp.74 = getv function %tmp.73 :requestUpdate;
-        invoke %tmp.73 %tmp.74();
-_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_44_33_62_4_stop:
+        push %tmp.43;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_52_56_87_end:
+        %tmp.44 = phi [%tmp.36 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_12_56_87_begin] [%tmp.43 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_52_56_87_false] [%tmp.44 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_52_56_87_end];
+        bt %tmp.44 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_8_60_8_if_true;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_92_56_127_false:
+        %tmp.45 = lgetv %app.3;
+        symbol [ app %tmp.45 56 93 96 ];
+        symbol [ getProperty %tmp.46 56 97 108 ];
+        %tmp.46 = getv function %tmp.45 :getProperty;
+        %tmp.47 = "Opt3";
+        %tmp.48 = invoke %tmp.45 %tmp.46(%tmp.47);
+        symbol [ WEATHER %tmp.50 56 120 127 ];
+        %tmp.50 = getv ? :WEATHER;
+        %tmp.51 = eq %tmp.48 %tmp.50;
+        push %tmp.51;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_92_56_127_end:
+        %tmp.52 = phi [%tmp.44 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_12_56_127_begin] [%tmp.51 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_92_56_127_false] [%tmp.52 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_92_56_127_end];
+        bt %tmp.52 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_8_60_8_if_true;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_132_56_167_false:
+        %tmp.53 = lgetv %app.3;
+        symbol [ app %tmp.53 56 133 136 ];
+        symbol [ getProperty %tmp.54 56 137 148 ];
+        %tmp.54 = getv function %tmp.53 :getProperty;
+        %tmp.55 = "Opt4";
+        %tmp.56 = invoke %tmp.53 %tmp.54(%tmp.55);
+        symbol [ WEATHER %tmp.58 56 160 167 ];
+        %tmp.58 = getv ? :WEATHER;
+        %tmp.59 = eq %tmp.56 %tmp.58;
+        push %tmp.59;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_132_56_167_end:
+        %tmp.60 = phi [%tmp.52 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_12_56_167_begin] [%tmp.59 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_132_56_167_false] [%tmp.60 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_132_56_167_end];
+        bf %tmp.60 @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_8_60_8_if_else_false;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_8_60_8_if_true:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_170_58_8_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 57 12 ]
+        symbol [ WeatherForecast %tmp.64 57 34 49 ];
+        %tmp.64 = getv ? :WeatherForecast;
+        %tmp.61 = newc %tmp.64 ();
+        symbol [ weatherForecast ? 57 12 27 ];
+        putv self :weatherForecast %tmp.61;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_170_58_8_stop:
+        goto @_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_8_60_8_if_end;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_8_60_8_if_else_false:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_58_15_60_8_start:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 59 12 ]
+        %tmp.65 = null;
+        symbol [ weatherForecast ? 59 12 27 ];
+        putv self :weatherForecast %tmp.65;
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_58_15_60_8_stop:
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_56_8_60_8_if_end:
+[ "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc" 62 8 ]
+        symbol [ WatchUi %tmp.66 62 8 15 ];
+        %tmp.66 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.67 62 16 29 ];
+        %tmp.67 = getv function %tmp.66 :requestUpdate;
+        invoke %tmp.66 %tmp.67();
+_Users_cizi_Garmin_Sundance_AMOLED_source_SundanceApp_mc_45_33_63_4_stop:
     }
 }
 [ @file = "/Users/cizi/Garmin/Sundance-AMOLED/source/SundanceApp.mc"; @line = 1; ]
